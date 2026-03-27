@@ -4,6 +4,8 @@ from flask import render_template, Blueprint
 
 home_page_bp = Blueprint("home", __name__)
 
-@home_page_bp.route("/")
+@home_page_bp.route("/", methods = ["GET"]) # This configuration is the default, but i will show it for better transparence.
 def home():
-    return render_template("testing.html")
+    """Return for front-end the home-page html"""
+
+    return render_template("page_one/index.html")
