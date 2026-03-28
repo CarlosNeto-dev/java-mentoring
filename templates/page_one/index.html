@@ -27,3 +27,43 @@
     </div>
   </div>
 {% endblock %}
+
+{% block content %} 
+  <section class="hero-section" id="hero-page">
+    <div class="welcome-div">
+      <div class="div-title">
+        <img src="{{ url_for('static', filename='img/waving-hands.png') }}" alt="wave-hand">
+        
+        <h1>Olá, Entusiastas de Java.</h1>
+      </div>
+
+      <div class="div-content">
+        <p>Aqui é o lugar ideal para tirar dúvidas e aprender mais sobre Java!</p>
+      </div>
+    </div>
+
+    <div class="div-get-started">
+      <div class="book-format">
+        <img src="{{ url_for('static', filename='img/icon-java.gif') }}" alt="">
+      </div>
+
+      <h2>Aprenda Java</h2>
+
+      <p>"Não sou gênio, porém como disciplina e dedicação posso me tornar um!"</p>
+
+      <button>
+        Comece Aprender 
+        
+        <i class="fa-solid fa-arrow-right icon-one"></i>
+      </button>
+    </div>
+  </section>
+
+  <section class="about-us-section" id="about-us-page">
+
+  </section>
+
+  <section class="material-section" id="material-page">
+
+  </section>
+{% endblock %}
