@@ -8,32 +8,53 @@
       <i class="fa-brands fa-java"></i>
     </div>
 
-    <div class="navbar">
+    <div class="navbar-desktop">
       <nav>
         <ul>
           <li>
-            <a href="#">Início</a>
+            <a href="#hero-page">Início</a>
           </li>
 
           <li>
-            <a href="#">Sobre Nós</a>
+            <a href="#about-us-page">Sobre Nós</a>
           </li>
 
           <li>
-            <a href="#">Material</a>
+            <a href="#material-page">Material</a>
           </li>
         </ul>
       </nav>
     </div>
+
+    <button class="mobile-menu-button">
+      <i class="fa-solid fa-bars icon-two"></i>
+    </button>
   </div>
+    <div class="navbar-mobile">
+      <nav>
+        <ul>
+          <li>
+            <a href="#hero-page">Início🏡</a>
+          </li>
+
+          <li>
+            <a href="#about-us-page">Sobre Nós👥</a>
+          </li>
+
+          <li>
+            <a href="#material-page">Material🗂️</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 {% endblock %}
 
-{% block content %} 
+{% block content %}
   <section class="hero-section" id="hero-page">
     <div class="welcome-div">
       <div class="div-title">
         <img src="{{ url_for('static', filename='img/waving-hands.png') }}" alt="wave-hand">
-        
+
         <h1>Olá, Entusiastas de Java.</h1>
       </div>
 
@@ -51,9 +72,13 @@
 
       <p>"Não sou gênio, porém como disciplina e dedicação posso me tornar um!"</p>
 
+      <div class="chapter-one">
+        <h3>Capítulo 1 - Introdução Ao Java ☕︎</h3>
+      </div>
+
       <button>
-        Comece Aprender 
-        
+        Comece Aprender
+
         <i class="fa-solid fa-arrow-right icon-one"></i>
       </button>
     </div>
