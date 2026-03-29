@@ -16,7 +16,7 @@
           </li>
 
           <li>
-            <a href="#about-us-page">Sobre Nós</a>
+            <a href="#dynamic-page">Dinâmica</a>
           </li>
 
           <li>
@@ -38,7 +38,7 @@
           </li>
 
           <li>
-            <a href="#about-us-page">Sobre Nós👥</a>
+            <a href="#dynamic-page">Dinâmica⚙️</a>
           </li>
 
           <li>
@@ -65,7 +65,7 @@
 
     <div class="div-get-started">
       <div class="book-format">
-        <img src="{{ url_for('static', filename='img/icon-java.gif') }}" alt="">
+        <img src="{{ url_for('static', filename='img/icon-java.gif') }}" alt="java-animated-gif">
       </div>
 
       <h2>Aprenda Java</h2>
@@ -84,11 +84,76 @@
     </div>
   </section>
 
-  <section class="about-us-section" id="about-us-page">
+  <section class="dynamic-section" id="dynamic-page">
+    <div class="dynamic-title">
+      <h3>Como Funciona?</h3>
 
+      <img src="{{ url_for('static', filename='img/thinking.gif') }}" alt="thinking-emoji">
+    </div>
+
+    <div class="dynamic-content">
+      <div class="demonstration-1 book-style">
+        <div class="paper-style"></div>
+      </div>
+
+      <div class="text-content1 text-style">
+        <h4>Selecione Um Tópico Em Destaque</h4>
+      </div>
+
+      <div class="demonstration-2 demonstration-style">
+        <img src="{{ url_for('static', filename='img/coding.gif') }}" alt="coding-gif">
+      </div>
+
+      <div class="text-content2 text-style">
+        <h3>Abra Sua IDE Favorita E Comece A Codar</h3>
+      </div>
+    </div>
   </section>
 
   <section class="material-section" id="material-page">
+    <div class="topics-div">
+      <div class="book-topic-format1 book-style">
+        <h4>Introdução ao Java</h4>
+        <div class="book-paper paper-style">
+          <p>
+            - Origem do Java; <br>
+            - Propósito do Java <br>
+            - Sintaxe Básica <br>
+          </p>
+        </div>
+      </div> <div class="book-topic-format2 book-style">
+        <h4>Introdução ao Java</h4>
+        <div class="book-paper paper-style">
+          <p>
+            - Origem do Java; <br>
+            - Propósito do Java <br>
+            - Sintaxe Básica <br>
+          </p>
+        </div>
+      </div> <div class="book-topic-format3 book-style">
+        <h4>Introdução ao Java</h4>
+        <div class="book-paper paper-style">
+          <p>
+            - Origem do Java; <br>
+            - Propósito do Java <br>
+            - Sintaxe Básica <br>
+          </p>
+        </div>
+      </div> <div class="book-topic-format4 book-style">
+        <h4>Introdução ao Java</h4>
+        <div class="book-paper paper-style">
+          <p>
+            - Origem do Java; <br>
+            - Propósito do Java <br>
+            - Sintaxe Básica <br>
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <div class="more-content">
+      <h6>Para mais conteúdos</h6>
+      <button>Acesse Aqui</button>
+    </div>
   </section>
 {% endblock %}
