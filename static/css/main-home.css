@@ -1,11 +1,11 @@
-main {
+.main-home {
     .hero-section {
         position: relative;
         min-height: clamp(650px, 100vh, 1180px);
         padding-bottom: clamp(15rem, 25vh, 25rem);
         width: 100%;
         display: flex;
-        justify-content: flex-start;;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: column;
         background-color: #000000;

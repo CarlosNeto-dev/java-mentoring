@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %} Primeira página {% endblock %}
+{% block title %} Home Page {% endblock %}
 
 {% block header %}
+<header class="header-home">
   <div class="wrapper-header">
     <div class="logo">
       <i class="fa-brands fa-java"></i>
@@ -47,9 +48,11 @@
         </ul>
       </nav>
     </div>
+</header>
 {% endblock %}
 
 {% block content %}
+<main class="main-home">
   <section class="hero-section" id="hero-page">
     <div class="welcome-div">
       <div class="div-title">
@@ -76,11 +79,13 @@
         <h3>Capítulo 1 - Introdução Ao Java ☕︎</h3>
       </div>
 
-      <button>
-        Comece Aprender
+      <a href="{{ url_for('material_page.material') }}">
+        <button>
+          Comece Aprender
 
-        <i class="fa-solid fa-arrow-right icon-one"></i>
-      </button>
+          <i class="fa-solid fa-arrow-right icon-one"></i>
+        </button>
+      </a>
     </div>
   </section>
 
@@ -112,48 +117,73 @@
 
   <section class="material-section" id="material-page">
     <div class="topics-div">
-      <div class="book-topic-format1 book-style">
-        <h4>Introdução ao Java</h4>
-        <div class="book-paper paper-style">
-          <p>
-            - Origem do Java; <br>
-            - Propósito do Java <br>
-            - Sintaxe Básica <br>
-          </p>
+      <a href="{{ url_for('material_page.material') }}">
+        <div class="book-topic-format1 book-style">
+          <h4>Introdução ao Java</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              - Origem do Java; <br>
+              - Propósito do Java <br>
+              - Sintaxe Básica <br>
+            </p>
+          </div>
         </div>
-      </div> <div class="book-topic-format2 book-style">
-        <h4>Introdução ao Java</h4>
-        <div class="book-paper paper-style">
-          <p>
-            - Origem do Java; <br>
-            - Propósito do Java <br>
-            - Sintaxe Básica <br>
-          </p>
+      </a>
+
+      <a href="{{ url_for('material_page.material') }}">
+        <div class="book-topic-format2 book-style">
+          <h4>Introdução ao Java</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              - Origem do Java; <br>
+              - Propósito do Java <br>
+              - Sintaxe Básica <br>
+            </p>
+          </div>
         </div>
-      </div> <div class="book-topic-format3 book-style">
-        <h4>Introdução ao Java</h4>
-        <div class="book-paper paper-style">
-          <p>
-            - Origem do Java; <br>
-            - Propósito do Java <br>
-            - Sintaxe Básica <br>
-          </p>
+      </a>
+
+      <a href="{{ url_for('material_page.material') }}">
+        <div class="book-topic-format3 book-style">
+          <h4>Introdução ao Java</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              - Origem do Java; <br>
+              - Propósito do Java <br>
+              - Sintaxe Básica <br>
+            </p>
+          </div>
         </div>
-      </div> <div class="book-topic-format4 book-style">
-        <h4>Introdução ao Java</h4>
-        <div class="book-paper paper-style">
-          <p>
-            - Origem do Java; <br>
-            - Propósito do Java <br>
-            - Sintaxe Básica <br>
-          </p>
+      </a>
+
+      <a href="{{ url_for('material_page.material') }}">
+        <div class="book-topic-format4 book-style">
+          <h4>Introdução ao Java</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              - Origem do Java; <br>
+              - Propósito do Java <br>
+              - Sintaxe Básica <br>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
 
     <div class="more-content">
       <h6>Para mais conteúdos</h6>
-      <button>Acesse Aqui</button>
+      <a href="{{ url_for('material_page.material') }}">
+        <button>Acesse Aqui</button>
+      </a>
     </div>
   </section>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 {% endblock %}

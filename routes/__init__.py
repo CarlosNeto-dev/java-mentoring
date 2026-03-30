@@ -1,6 +1,7 @@
 """This file talks about the importation of all modules on this folder."""
 
 from routes.home_page import home_page_bp
+from routes.material_page import material_page
 
 def register_routes(app) -> None:
     """
@@ -10,7 +11,7 @@ def register_routes(app) -> None:
     :return: None
     """
 
-    blueprints = [home_page_bp]
+    blueprints = [home_page_bp, material_page]
 
     for blueprint in blueprints:
         app.register_blueprint(blueprint)

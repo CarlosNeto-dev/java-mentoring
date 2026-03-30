@@ -1,4 +1,4 @@
-header {
+.header-home {
   padding: clamp(1.25rem, 2.5vw, 3rem);
   width: 100%;
   display: flex;
@@ -49,13 +49,13 @@ header {
             color: rgba(255, 255, 255, 0.8);
             transition: all 500ms ease-in-out;
 
-           &:hover {
+          &:hover {
             border-bottom: 1px solid white;
-           }
+          }
 
-           &:active {
+          &:active {
             transform: scale(0.9);
-           }
+          }
           }
         }
       }
@@ -85,7 +85,7 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
 
-   .mobile-menu-button {
+  .mobile-menu-button {
       display: none;
     }
 
@@ -145,18 +145,18 @@ header {
           gap: clamp(1rem, 1.5vw, 2rem);
 
           li {
-           padding: .2rem .75rem;
-           transition: all 500ms ease-in-out;
-           border-bottom: 1px solid transparent;
-           cursor: pointer;
+          padding: .2rem .75rem;
+          transition: all 500ms ease-in-out;
+          border-bottom: 1px solid transparent;
+          cursor: pointer;
 
-           &:hover {
+          &:hover {
             border-bottom-color: white;
-           }
+          }
 
-           &:active {
+          &:active {
             transform: scale(0.9);
-           }
+          }
 
             a {
               text-decoration: none;

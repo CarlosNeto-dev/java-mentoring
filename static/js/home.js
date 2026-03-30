@@ -1,4 +1,4 @@
-/** ======================== Mobile Navbar ======================== */
+/** ======================== Home Mobile Navbar ======================== */
 
 const navbarMobile = document.querySelector(".navbar-mobile");
 const barsMobileBtn = document.querySelector(".mobile-menu-button");
@@ -9,3 +9,4 @@ barsMobileBtn.addEventListener("click", () => {
   barsMobileBtn.classList.toggle("active");
   body.classList.toggle("no-scroll");
 })
+
