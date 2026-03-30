@@ -8,4 +8,4 @@ home_page_bp = Blueprint("home", __name__)
 def home():
     """Return for front-end the home-page html"""
 
-    return render_template("page_one/index.html")
+    return render_template("home/index.html")
