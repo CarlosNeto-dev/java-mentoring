@@ -1,0 +1,29 @@
+.console-code {
+  background: rgba(13, 17, 23, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: clamp(1.25rem, 1.5vw, 2rem);
+  border-radius: 1rem;
+  position: relative;
+}
+.console-code::before {
+  content: "";
+  position: relative;
+  height: 3.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.console-code .console-content pre {
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible;
+}
+.console-code .console-content pre code {
+  font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace !important;
+  text-shadow: none !important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}/*# sourceMappingURL=code-theme.css.map */

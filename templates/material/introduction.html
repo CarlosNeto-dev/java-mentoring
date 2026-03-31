@@ -169,10 +169,20 @@
             Em Python (Dinâmico/Lento):
 
             <div class="console-code">
-              <code class="language-python">
-                name = "Carlos" # A variável "name" recebe uma string
-                name = 18 # A variável "name" recebe um inteiro
-              </code>
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-python">
+name = "Carlos" # A variável "name" recebe uma string
+name = 18 # A variável "name" recebe um inteiro
+
+print(name) # Saída: 18
+                </code></pre>
+              </div>
             </div>
           </li>
 
@@ -180,10 +190,24 @@
             Em Java (Estático/Rápido):
 
             <div class="console-code">
-              <code class="language-java">
-                String name = "Carlos"; // A variável "name" recebe uma string
-                name = 18; // A variável "name" recebe um inteiro
-              </code>
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green">
+              </div>
+
+              <div class="console-content">
+              <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    String name = "Carlos"; // A variável "name" recebe uma string;
+    String name = 18 // A variável "name" recebe um inteiro;
+
+    System.out.println(name); // Saída: Erro de Compilação Por Tipos de Dados Diferentes.
+  }
+}
+              </code></pre>
+              </div>
             </div>
           </li>
         </ul>

@@ -2,12 +2,37 @@
 
 .console-code {
   background: $console-bg;
-  color: $console-color;
-  padding: clamp(1rem, 1.5vw, 2rem);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid $border-color;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: clamp(1.25rem, 1.5vw, 2rem);
   border-radius: 1rem;
-  height: auto;
+  position: relative;
 
-  code {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  &::before {
+    content: "";
+    position: relative;
+    height: 3.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid $border-color;
+  }
+
+  .console-content {
+  
+
+    pre {
+      background: transparent !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: visible;
+
+      code {
+        font-family: $mono-font !important;
+        text-shadow: none !important;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    }
   }
 }
