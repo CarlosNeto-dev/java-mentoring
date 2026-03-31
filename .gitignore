@@ -1,0 +1,45 @@
+# ==========================================
+# GITIGNORE DE ELITE - CARLOS ALBERTO (JAVA/PYTHON)
+# ==========================================
+
+# --- Python & Flask ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+venv/
+ENV/
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Sass / SCSS (O segredo da limpeza) ---
+# Ignoramos os mapas de depuração que poluíram seu GitHub
+*.css.map
+*.sass.map
+
+# NOTA: Não ignoramos o .css porque o Render precisa dele pronto!
+# Se um dia o Render compilar o Sass, aí ignoramos o .css também.
+
+# --- VS Code (Otimização do Editor) ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+*.code-workspace
+
+# --- Sistema Operacional ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# --- Logs e Temporários ---
+*.log
+*.tmp
+*.temp
