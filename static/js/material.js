@@ -14,3 +14,15 @@ arrowIcon.forEach((icon) => {
     icon.classList.toggle("active");
   });
 });
+
+document.querySelectorAll('.chapter-accordion').forEach(details => {
+  details.addEventListener('toggle', (e) => {
+    const subNav = details.querySelector('.sub-nav');
+
+    if (details.open) {
+      subNav.style.animation = 'none';
+      subNav.offsetHeight;
+      subNav.style.animation = null;
+    }
+  });
+});
