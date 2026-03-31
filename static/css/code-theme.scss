@@ -1,0 +1,13 @@
+@import 'variables';
+
+.console-code {
+  background: $console-bg;
+  color: $console-color;
+  padding: clamp(1rem, 1.5vw, 2rem);
+  border-radius: 1rem;
+  height: auto;
+
+  code {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+}
