@@ -1,0 +1,300 @@
+{% extends "material_base.html" %}
+
+{% block title %} Sintaxe Básica {% endblock %}
+
+{% block material_content %}
+  <main id="basic_syntax" class="main-topic">
+    <div class="main-topic-title">
+      <h1>Sintaxe Básica do <span class="span-decoration"> Java 🏗️</span></h1>
+    </div>
+
+    <div class="main-topic-content">
+      <p class="main-topic-description">
+        Neste capítulo, saímos da teoria de instalação e mergulhamos na <strong>Sintaxe Básica</strong>, o verdadeiro "DNA" que sustenta qualquer aplicação Java robusta. Dominar esses conceitos é o que separa um código amador de um sistema de nível <strong>Fellow.</strong>
+      </p>
+
+      <h3>
+        Vamos dividir essa jornada em três pilares fundamentais🧬:
+      </h3>
+
+      <ul class="main-topic-list">
+        <li class="main-topic-list-item">
+          <strong>📦 2.1 Variáveis e Tipos de Dados: Entenda como o Java gerencia a memória do computador. Você vai aprender a diferença entre tipos primitivos (como int e double) e objetos (como String), garantindo que seu código seja eficiente e não desperdice recursos.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>⚙️ 2.2 Operadores: O motor da lógica computacional. Vamos explorar desde cálculos matemáticos precisos até expressões lógicas complexas (&&, ||, !) que permitem ao seu software realizar comparações e tomar decisões rápidas.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🛣️ 2.3 Controle de Fluxo: Aqui é onde o seu programa ganha "vida". Vamos dominar as estruturas de decisão como if/else e switch, permitindo que o seu software execute caminhos diferentes baseados em condições reais de uso.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🔄 2.4 Estruturas de Repetição (Loops): Aprenda a automatizar tarefas repetitivas com for, while e do-while. É aqui que você ganha escala e performance.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🏗️ 2.5 Métodos: O primeiro passo para o Código Limpo. Aprenda a organizar blocos de lógica reutilizáveis, evitando repetição de código (Princípio DRY - Don't Repeat Yourself).</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>📚 2.6 Arrays (Vetores): Descubra como armazenar listas de dados em uma única variável, facilitando o gerenciamento de grandes volumes de informação.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🛠️ 2.7 Manipulação de Strings: Domine a classe String e aprenda a concatenar, fatiar e comparar textos como um profissional.</strong>
+        </li>
+      </ul>
+
+      <blockquote class="main-topic-blockquote">
+        <strong>💡 Insight do Carlos:</strong>
+
+        "Olha, eu sei que no começo a sintaxe do Java pode parecer um pouco rígida, cheia de regras, pontos e vírgulas. Pode até bater aquele desânimo quando o compilador reclama de uma chave esquecida. 😅 Mas escuta o que eu te digo: cada erro que você resolve hoje é um neurônio a mais na sua rede de conhecimento. 🧠
+        Na jornada para ser um especialista em IA, essa base é o seu alicerce. Por mais difícil que a curva de aprendizado pareça agora, dominar essa fundação vai te dar a liberdade de construir sistemas incríveis no futuro. Mantenha a disciplina, melhore 1% a cada dia e não desista. O esforço vai valer muito a pena! 🦖🚀"
+      </blockquote>
+    </div>
+
+    <section id="variables-and-data-types" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Variáveis e Tipos de Dados 📦</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          No Java, uma variável é um espaço na memória do computador onde guardamos informações. Imagine como uma caixa com uma etiqueta: a etiqueta é o nome da variável, e o <strong>formato da caixa</strong> é o tipo de dado.
+        </p>
+
+        <h3>
+          <strong>
+            🏗️ Como declarar uma variável?
+          </strong>
+        </h3>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+int idade = 18; // Declarando um número inteiro
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>
+          <strong>
+            🧪 Os Tipos Primitivos (Os Essenciais):
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Existem tipos básicos que você vai usar 99% do tempo:
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            Inteiro 🔢:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    int number1 = 20;
+    int number2 = 10;
+
+    int result = number1 + number2;
+
+    System.out.println(result); // Saída: 30
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+
+          <li class="sub-topic-list-item">
+            Flutuante 🔢:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    double number1 = 2.5;
+    double number2 = 2.5;
+
+    double result = number1 + number2;
+
+    System.out.println(result); // Saída: 5.0
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+
+          <li class="sub-topic-list-item">
+            Booleano 🔀:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    boolean isTrue = true;
+    boolean isFalse = false;
+
+    System.out.println(isTrue); // Saída: true
+    System.out.println(isFalse); // Saída: false
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+
+          <li class="sub-topic-list-item">
+            char 📝:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    char letter = 'A';
+
+    System.out.println(letter); // Saída: A
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <blockquote class="sub-topic-blockquote">
+          <strong>
+            ⚠️Atenção:
+          </strong>
+
+          Existe também o tipo <strong>String</strong>, que usamos para textos (como seu nome "Carlos", "Maria" etc...). No Java, String <strong>não é um tipo primitivo</strong>, mas sim uma Classe, por isso sempre começa com <strong>S</strong> maiúsculo! ⚠️
+        </blockquote>
+
+        <h3>
+          <strong>
+            📏 Regras de Ouro para Nomes de Variáveis
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Para manter o seu código no padrão Clean Code:
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>CamelCase🐫:</strong>
+
+            Comece com letra minúscula e cada palavra seguinte com maiúscula (ex: minhaVariavel, valorBolsaEstagio).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Seja descritivo📔:</strong>
+
+            Nada de criar variáveis chamadas a, b ou x. Use nomes que expliquem o que o dado é (ex: salarioMensal).
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="arithmetic-and-logical" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Operadores Aritméticos e Lógicos</h2>
+      </div>
+
+      <div class="sub-topic-content">
+
+      </div>
+    </section>
+
+    <section id="conditionals-and-loops" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Controle de Fluxo: Condicionais e Loops</h2>
+      </div>
+
+      <div class="sub-topic-content">
+
+      </div>
+    </section>
+
+    <section id="arrays-and-collections" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Arrays e Coleções</h2>
+      </div>
+
+      <div class="sub-topic-content">
+
+      </div>
+    </section>
+
+    <section id="methods-and-functions" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Métodos e Funções</h2>
+      </div>
+
+      <div class="sub-topic-content">
+
+      </div>
+    </section>
+
+    <section id="error-and-exceptions" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Tratamento de Erros e Exceções</h2>
+      </div>
+
+      <div class="sub-topic-content">
+
+      </div>
+    </section>
+
+    <section id="poo" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Programação Orientada a Objetos (POO)</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <p class="sub-topic-description">
+        </p>
+      </div>
+    </section>
+  </main>
+{% endblock %}
+
