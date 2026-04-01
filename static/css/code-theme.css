@@ -15,6 +15,21 @@
   background: rgba(255, 255, 255, 0.03);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+.console-code .console-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.console-code .console-dots .dot-red {
+  background: red;
+}
+.console-code .console-dots .dot-yellow {
+  background: yellow;
+}
+.console-code .console-dots .dot-green {
+  background: green;
+}
 .console-code .console-content pre {
   background: transparent !important;
   margin: 0 !important;
@@ -22,6 +37,7 @@
   overflow: visible;
 }
 .console-code .console-content pre code {
+  font-size: clamp(1.25rem, 1.5vw, 1.75rem);
   font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace !important;
   text-shadow: none !important;
   white-space: pre-wrap;

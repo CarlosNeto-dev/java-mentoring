@@ -67,7 +67,7 @@
     border-radius: 0;
     margin-left: 0;
     transform: translateY(-100%);
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding-bottom: 5rem;
     opacity: 0;
@@ -365,6 +365,7 @@
 .material-wrapper .main-topic .sub-topic {
   position: relative;
   height: auto;
+  width: auto;
   padding: clamp(1.5rem, 2vw, 3rem) clamp(2rem, 3vw, 4rem);
   border-radius: 2rem;
   margin-top: 2rem;
@@ -393,6 +394,11 @@
   border-color: rgba(0, 112, 243, 0.4);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
   transform: translateY(-5px);
+}
+@media screen and (max-width: 480px) {
+  .material-wrapper .main-topic .sub-topic {
+    width: 75vw;
+  }
 }
 .material-wrapper .main-topic .sub-topic .sub-topic-title {
   max-width: 800px;
@@ -457,7 +463,7 @@
   gap: clamp(1rem, 1.5vw, 2rem);
 }
 .material-wrapper .main-topic .sub-topic .sub-topic-content .sub-topic-list .sub-topic-list-item {
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.4rem, 1.75vw, 2rem);
   padding: 0.75rem 1.5rem;
   line-height: 1.6;
   font-weight: 300;
@@ -476,6 +482,11 @@
   .material-wrapper .main-topic .sub-topic .sub-topic-content .sub-topic-list .sub-topic-list-item {
     font-size: 2.5rem;
   }
+}
+.material-wrapper .main-topic .sub-topic .sub-topic-content .sub-topic-list .sub-topic-list-item h4 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 500;
+  color: #fff;
 }
 .material-wrapper .main-topic .sub-topic .sub-topic-content .sub-topic-blockquote {
   border: 3px solid rgba(255, 255, 255, 0.45);
@@ -550,4 +561,148 @@
 .material-wrapper .main-topic .sub-topic .sub-topic-content .timeline .timeline-item p {
   color: rgba(255, 255, 255, 0.7);
   font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+.material-wrapper .main-topic .more-content {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 2000px;
+  margin-top: 5rem;
+}
+@media screen and (max-width: 1000px) {
+  .material-wrapper .main-topic .more-content {
+    height: 80vh;
+    perspective: 1500px;
+    margin-top: 20rem;
+  }
+}
+.material-wrapper .main-topic .more-content .notebook-body {
+  background: linear-gradient(135deg, #27272a 0%, #09090b 100%);
+  height: 30rem;
+  width: 45rem;
+  position: relative;
+  transform: rotateX(60deg) translateY(50px);
+  transform-style: preserve-3d;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+.material-wrapper .main-topic .more-content .notebook-body::after {
+  content: "";
+  position: absolute;
+  bottom: 1.5rem;
+  width: 12rem;
+  height: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+}
+.material-wrapper .main-topic .more-content .notebook-body:hover .notebook-face {
+  transform: rotateX(-60deg);
+}
+@media screen and (max-width: 1024px) {
+  .material-wrapper .main-topic .more-content .notebook-body {
+    transform: rotateX(60deg) scale(0.9) translateY(0);
+    width: 95vw;
+    height: 28rem;
+    border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .material-wrapper .main-topic .more-content .notebook-body {
+    transform: rotateX(60deg) scale(1) translateY(-10px);
+    border-radius: 0.8rem;
+  }
+  .material-wrapper .main-topic .more-content .notebook-body:hover .notebook-face {
+    transform: rotateX(-100deg);
+  }
+}
+@media screen and (min-width: 2560px) {
+  .material-wrapper .main-topic .more-content .notebook-body {
+    height: 45rem;
+    width: 80rem;
+  }
+}
+.material-wrapper .main-topic .more-content .notebook-body .notebook-face {
+  background: #18181b;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  position: absolute;
+  transform: rotateX(-180deg);
+  border-radius: 1.5rem;
+  transition: all 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 500;
+}
+.material-wrapper .main-topic .more-content .notebook-body .notebook-face .notebook-face-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: rotateZ(-160deg);
+}
+.material-wrapper .main-topic .more-content .notebook-body .notebook-face .notebook-face-decoration img {
+  height: 18rem;
+  width: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.4));
+}
+.material-wrapper .main-topic .more-content .notebook-body .notebook-face .notebook-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  transform: translateZ(1px);
+  backface-visibility: hidden;
+  z-index: -1;
+}
+.material-wrapper .main-topic .more-content .notebook-body .notebook-face .notebook-content a {
+  color: #4ade80;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.material-wrapper .main-topic .more-content .notebook-body .notebook-face .notebook-content a:hover {
+  border-bottom: 1px solid #4ade80;
+  text-shadow: 0 0 15px rgba(74, 222, 128, 0.6);
+  filter: brightness(1.2);
+}
+.material-wrapper .main-topic .more-content .notebook-body .notebook-face .notebook-content span {
+  height: 95%;
+  width: 100%;
+  font-family: "Fira Code", monospace;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  line-height: 1.4;
+  transform: translateZ(5px);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: #000;
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: inset 0 0 50px rgb(0, 0, 0), 0 0 20px rgba(59, 130, 246, 0.15);
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+@media screen and (min-width: 2560px) {
+  .material-wrapper .main-topic .more-content .notebook-body .notebook-face .notebook-content span {
+    font-size: 3rem;
+  }
 }/*# sourceMappingURL=main-material.css.map */

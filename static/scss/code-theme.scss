@@ -18,9 +18,28 @@
     border-bottom: 1px solid $border-color;
   }
 
-  .console-content {
-  
+  .console-dots {
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
 
+    .dot-red {
+      background: red;
+    }
+
+    .dot-yellow {
+      background: yellow;
+    }
+
+    .dot-green {
+      background: green;
+    }
+  }
+
+  .console-content {
     pre {
       background: transparent !important;
       margin: 0 !important;
@@ -28,6 +47,7 @@
       overflow: visible;
 
       code {
+        font-size: clamp(1.25rem, 1.5vw, 1.75rem);
         font-family: $mono-font !important;
         text-shadow: none !important;
         white-space: pre-wrap;

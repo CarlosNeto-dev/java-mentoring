@@ -166,7 +166,7 @@
 
         <ul class="sub-topic-list">
           <li class="sub-topic-list-item">
-            Em Python (Dinâmico/Lento):
+            <h4>Em Python 🐍 (Dinâmico/Lento):</h4>
 
             <div class="console-code">
               <div class="console-dots">
@@ -187,13 +187,13 @@ print(name) # Saída: 18
           </li>
 
           <li class="sub-topic-list-item">
-            Em Java (Estático/Rápido):
+            <h4>Em Java ☕ (Estático/Rápido):</h4>
 
             <div class="console-code">
               <div class="console-dots">
                 <span class="dot-red"></span>
                 <span class="dot-yellow"></span>
-                <span class="dot-green">
+                <span class="dot-green"></span>
               </div>
 
               <div class="console-content">
@@ -211,8 +211,37 @@ public class Main {
             </div>
           </li>
         </ul>
-      </div>
 
+        <h3>2. Gerenciamento de Memória (Garbage Collector) 🧹</h3>
+
+        <p class="sub-topic-description">
+          Em linguagens antigas (como C++), o programador tinha que apagar manualmente da memória o que não usava mais. Se esquecesse, o computador travava. O Java resolve isso com o <strong>Garbage Collector.</strong>
+        </p>
+
+        <blockquote class="sub-topic-blockquote"><strong>Como funciona:</strong> Imagine que o Java tem um "faxineiro" automático que fica rodando no fundo. Ele identifica objetos que seu código não está mais usando e os joga fora, liberando espaço sem você precisar digitar uma linha de código para isso.</strong></blockquote>
+
+        <h3>3. Orientação a Objetos (OO) 🧬</h3>
+
+        <p class="sub-topic-description">O Java não é apenas uma linguagem; é um paradigma. Tudo no Java é tratado como um <strong>Objeto</strong></p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>Conceito:</strong> Imagine que você está criando um sistema para uma biblioteca. Em Java, você não cria apenas variáveis soltas; você cria o objeto Livro, que tem propriedades (título, autor) e ações (emprestar, devolver).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Organização:</strong> Isso permite que o código seja reutilizável e muito mais fácil de manter em projetos gigantes.
+          </li>
+        </ul>
+
+        <h3>4. Multithreading (Multitarefa) 🧵</h3>
+
+        <p class="sub-topic-description">
+          O Java foi construído para ser eficiente em processadores modernos com vários núcleos.
+        </p>
+
+        <blockquote class="sub-topic-blockquote"><strong>Na prática:</strong> Ele permite que um programa execute várias tarefas simultaneamente. Por exemplo, enquanto o Java processa um pagamento no fundo, a interface do usuário continua funcionando sem travar.</blockquote>
+      </div>
     </section>
 
     <section id="good-practices" class="sub-topic">
@@ -221,7 +250,71 @@ public class Main {
       </div>
 
       <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          No Java, escrever um código que funciona é apenas o primeiro passo. O verdadeiro desafio é escrever um código que seu "eu do futuro" e sua equipe consigam entender e manter sem dor de cabeça. 🧠
+        </p>
 
+        <h3>1. Nomenclatura e CamelCase 🐪</h3>
+
+        <p class="sub-topic-description">
+          O Java segue padrões de escrita muito específicos que ajudam na leitura imediata do código.
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+          <strong>Classes:</strong> Devem começar com letra maiúscula (PascalCase). Ex: ContaBancaria, UsuarioService.
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Métodos e Variáveis:</strong> Começam com letra minúscula e as palavras seguintes com maiúscula (camelCase). Ex: calcularSaldo(), nomeDoUsuario.
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Constantes:</strong> Tudo em maiúsculo com underline. Ex: VALOR_MAXIMO.
+          </li>
+        </ul>
+
+        <blockquote class="sub-topic-blockquote"><strong>Dica do Monitor:</strong> Nunca use nomes genéricos como <code>var1</code> ou <code>x</code>. Se a variável armazena o preço de um produto, o nome deve ser <code>precoProduto</code>. O código deve ser autoexplicativo! 💡</blockquote>
+
+        <h3>2. O Princípio DRY (Don't Repeat Yourself) ♻️</h3>
+
+        <p class="sub-topic-description">"Não se repita". Se você está copiando e colando o mesmo trecho de código em três lugares diferentes, algo está errado.</p>
+
+        <blockquote class="sub-topic-blockquote"><strong>Como aplicar:</strong> Se uma lógica se repete, transforme-a em um Método. Assim, se precisar mudar a regra no futuro, você muda em um só lugar e o sistema todo se atualiza.</blockquote>
+
+        <h3>3. Indentação e Organização Visual 📐</h3>
+
+        <p class="sub-topic-description">Como o Java usa muitas chaves { }, a indentação não é apenas estética, é sobrevivência.</p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+// Código "Sujo" (Dificil de ler)
+public void teste(){if(x>0){System.out.println("Ok");}}
+
+// Código "Limpo" (Fácil de ler)
+public void teste() {
+  if (x > 0) {
+    System.out.println("Ok");
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>4. Comentários: Use com Moderação ✍️</h3>
+
+        <p class="sub-topic-description">
+          Um bom código deve ser como uma piada: se você tem que explicar, é porque ele não foi tão bom assim.
+        </p>
+
+        <blockquote class="sub-topic-blockquote"><strong>Insight:</strong> Use comentários para explicar o <strong>PORQUÊ</strong> você tomou uma decisão complexa, e não para explicar <strong>O QUE</strong> o código está fazendo. Se o código precisa de comentário para ser entendido, tente simplificar o código primeiro.</blockquote>
       </div>
     </section>
 
@@ -231,9 +324,41 @@ public class Main {
       </div>
 
       <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          Muitos iniciantes olham para o Java e o julgam como uma linguagem "complicada", "burocrática" ou "restrita demais". É comum ouvir que no Python tudo é mais rápido ou que o TypeScript é mais moderno. Mas a verdade é que o propósito do Java não é ser rápido na escrita, mas sim <strong>infalível na execução</strong>. 🏗️
+        </p>
 
+        <h3>Por que nos apaixonamos pelo Java? ❤️</h3>
+
+        <p class="sub-topic-description">
+          Quando você supera a barreira inicial das chaves e das tipagens, você percebe que a complexidade do Java é, na verdade, uma organização impecável. É uma linguagem feita para construir sistemas que <strong>não podem falhar</strong>.
+        </p>
+
+        <blockquote class="sub-topic-blockquote">
+          <strong>Reflexão do Monitor:</strong> "O Java é como a engenharia de um arranha-céu. Pode parecer difícil entender cada viga e cálculo no início, mas é essa estrutura que permite que o prédio suporte o peso de décadas sem uma única rachadura. Quando você entende a lógica por trás da rigidez, você se apaixona e quer aplicar essa segurança em todo lugar." 💎
+        </blockquote>
       </div>
     </section>
+
+    <div class="more-content">
+      <div class="notebook-body">
+        <div class="notebook-face">
+          <div class="notebook-face-decoration">
+            <img src="{{url_for('static', filename='img/gojira.jpg')}}" alt="">
+          </div>
+
+          <div class="notebook-content">
+              <span>
+                Para conteúdos mais avançados, consulte a:
+                <a href="https://docs.oracle.com/en/java/javase/" target="_blank">
+                  Documentação Oficial de Java
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 {% endblock %}
 
