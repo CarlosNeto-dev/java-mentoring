@@ -26,6 +26,22 @@
             z-index: -1;
         }
 
+        @media screen and (max-width: 800px) {
+            padding-top: 12rem;
+            height: auto;
+            min-height: 100vh;
+            padding-bottom: 5rem;
+
+            .welcome-div {
+                margin-top: 2rem;
+                gap: 2rem;
+
+                .div-title h1 {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+
         .welcome-div {
             display: flex;
             flex-direction: column;
@@ -88,6 +104,7 @@
               width: clamp(28.5rem, 80vw, 60rem);
               height: clamp(42.5rem, 65vw, 40rem);
               margin-top: 40rem;
+              position: relative;
             }
 
             .book-format {

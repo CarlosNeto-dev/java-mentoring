@@ -22,6 +22,21 @@
   pointer-events: none;
   z-index: -1;
 }
+@media screen and (max-width: 800px) {
+  .main-home .hero-section {
+    padding-top: 12rem;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+  }
+  .main-home .hero-section .welcome-div {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  .main-home .hero-section .welcome-div .div-title h1 {
+    font-size: 2.8rem;
+  }
+}
 .main-home .hero-section .welcome-div {
   display: flex;
   flex-direction: column;
@@ -74,6 +89,7 @@
     width: clamp(28.5rem, 80vw, 60rem);
     height: clamp(42.5rem, 65vw, 40rem);
     margin-top: 40rem;
+    position: relative;
   }
 }
 .main-home .hero-section .div-get-started .book-format {
