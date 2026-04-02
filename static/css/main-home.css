@@ -24,14 +24,19 @@
 }
 @media screen and (max-width: 800px) {
   .main-home .hero-section {
-    padding-top: 12rem;
+    padding-top: 10rem;
     height: auto;
-    min-height: 100vh;
-    padding-bottom: 5rem;
+    min-height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
   }
   .main-home .hero-section .welcome-div {
-    margin-top: 2rem;
-    gap: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 10rem;
+    gap: 1rem;
   }
   .main-home .hero-section .welcome-div .div-title h1 {
     font-size: 2.8rem;
@@ -43,7 +48,7 @@
   justify-content: center;
   align-items: center;
   gap: clamp(1rem, 1.5vw, 3rem);
-  margin-top: clamp(2rem, 5vh, 8rem);
+  margin-top: clamp(6.5rem, 8.5vw, 13.5rem);
 }
 .main-home .hero-section .welcome-div .div-title {
   display: flex;
@@ -86,10 +91,14 @@
 }
 @media screen and (max-width: 800px) {
   .main-home .hero-section .div-get-started {
-    width: clamp(28.5rem, 80vw, 60rem);
-    height: clamp(42.5rem, 65vw, 40rem);
-    margin-top: 40rem;
     position: relative;
+    transform: none;
+    width: 90%;
+    height: auto;
+    min-height: 450px;
+    top: 10rem;
+    margin-bottom: 0;
+    padding: 2rem 1.5rem;
   }
 }
 .main-home .hero-section .div-get-started .book-format {
