@@ -1,0 +1,141 @@
+{% extends "material_base.html" %}
+
+{% block title %} Class Hierarchy {% endblock %}
+
+{% block material_content %}
+    <main id="class-hierarchy" class="main-topic">
+        <div class="main-topic-title">
+            <h1>Hierarquia de Classes do <span>Java</span> 📈</h1>
+        </div>
+
+        <div class="main-topic-content">
+            <p class="main-topic-description">
+                Neste capítulo, entramos na fase de arquitetura avançada. Vamos aprender como o Java permite que classes se relacionem, compartilhem código e se comportem de formas diferentes. É aqui que você para de criar classes isoladas e começa a construir <strong>ecossistemas de objetos.</strong>
+            </p>
+
+            <h3>
+                Nossa jornada será dividida nestes três tópicos principais 🚀:
+            </h3>
+
+            <ul class="main-topic-list">
+                <li class="main-topic-list-item">
+                    <strong>
+                        🧬 4.1 Herança e Polimorfismo:
+                    </strong>
+
+                    O coração da reutilização. Entenda como uma classe "filha" pode herdar tudo de uma classe "pai" e, ao mesmo tempo, como um único objeto pode assumir múltiplas formas dependendo do contexto.
+                </li>
+
+                <li class="main-topic-list-item">
+                    <strong>
+                        🏗️ 4.2 Classes Abstratas e Interfaces:
+                    </strong>
+
+                    Os contratos do Java. Aprenda a criar modelos que definem <strong>o que</strong> deve ser feito, deixando para as classes específicas a liberdade de decidir como executar a tarefa. É a base dos grandes frameworks.
+                </li>
+
+                <li class="main-topic-list-item">
+                    <strong>
+                        📦 4.3 Pacotes e Organização de Código:
+                    </strong>
+
+                    O toque final do profissional. Aprenda a arrumar a casa, separando seu código em pastas lógicas (packages) para evitar conflitos e tornar seu projeto fácil de navegar e manter.
+                </li>
+
+                <blockquote class="main-topic-blockquote">
+                    <strong>
+                        💡 Insight do Carlos:
+                    </strong>
+
+                    "É nesse tópico onde você aprende a montar e gerenciar uma 'família'" 👨‍👩‍👧‍👦🚀
+                </blockquote>
+            </ul>
+        </div>
+
+        <section id="inheritance-and-polymorphism" class="sub-topic">
+            <div class="sub-topic-title">
+                <h2>
+                    Herança e Polimorfismo 🧬🎭
+                </h2>
+            </div>
+
+            <div class="sub-topic-content">
+                <p class="sub-topic-description">
+                    A <strong>Herança (Inheritance)</strong> é o mecanismo que permite que uma classe herde atributos e métodos de outra. Já o <strong>Polimorfismo</strong> é a capacidade de um objeto ser tratado como sua classe pai, mas ainda assim agir de sua própria maneira única.
+                </p>
+
+                <h3>
+                    <strong>
+                        Por que isso é importante?
+                    </strong>
+                </h3>
+
+                <ul class="sub-topic-list">
+                    <li class="sub-topic-list-item">
+                        <strong>
+                            Reutilização:
+                        </strong>
+
+                        Você não precisa reescrever o código de "vida" ou "nome" para cada tipo de personagem.
+                    </li>
+
+                    <li class="sub-topic-list-item">
+                        <strong>
+                            Flexibilidade:
+                        </strong>
+
+                        Você pode criar uma lista de "Characters" e colocar Guerreiros, Magos e Arqueiros juntos. O Java saberá como cada um deve atacar.
+                    </li>
+                </ul>
+
+                <h3>
+                    <strong>
+                        💻 Construindo a Árvore de Família
+                    </strong>
+                </h3>
+
+                <p class="sub-topic-description">
+                    No exemplo abaixo, veja como a classe Warrior estende Character (Herança) e como o método action() se comporta de forma diferente (Polimorfismo).
+                </p>
+
+                <div class="console-code">
+                    <div class="console-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+
+                    <div class="console-content">
+                        <pre><code class="language-java">
+// Classe Parente ()
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abstract-classes-and-interfaces" class="sub-topic">
+            <div class="sub-topic-title">
+                <h2>
+
+                </h2>
+            </div>
+
+            <div class="sub-topic-content">
+
+            </div>
+        </section>
+
+        <section id="packages-and-code-organization" class="sub-topic">
+            <div class="sub-topic-title">
+                <h2>
+
+                </h2>
+            </div>
+
+            <div class="sub-topic-content">
+
+            </div>
+        </section>
+    </main>
+{% endblock %}
