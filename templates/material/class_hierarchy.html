@@ -41,18 +41,18 @@
 
                     O toque final do profissional. Aprenda a arrumar a casa, separando seu código em pastas lógicas (packages) para evitar conflitos e tornar seu projeto fácil de navegar e manter.
                 </li>
-
-                <blockquote class="main-topic-blockquote">
-                    <strong>
-                        💡 Insight do Carlos:
-                    </strong>
-
-                    "É nesse tópico onde você aprende a montar e gerenciar uma 'família'" 👨‍👩‍👧‍👦🚀
-                </blockquote>
             </ul>
+
+            <blockquote class="main-topic-blockquote">
+                <strong>
+                    💡 Insight do Carlos:
+                </strong>
+
+                "É nesse tópico onde você aprende a montar e gerenciar uma 'família'" 👨‍👩‍👧‍👦🚀
+            </blockquote>
         </div>
 
-        <section id="inheritance-and-polymorphism" class="sub-topic">
+        <section id="heranca-polimorfismo" class="sub-topic">
             <div class="sub-topic-title">
                 <h2>
                     Herança e Polimorfismo 🧬🎭
@@ -95,7 +95,7 @@
                 </h3>
 
                 <p class="sub-topic-description">
-                    No exemplo abaixo, veja como a classe Warrior estende Character (Herança) e como o método action() se comporta de forma diferente (Polimorfismo).
+                    No exemplo abaixo, veja como a classe Warrior estende Character (Herança) e como o método action() se comporta de forma diferente, sobrescrevendo a ação padrão (Polimorfismo).
                 </p>
 
                 <div class="console-code">
@@ -107,7 +107,42 @@
 
                     <div class="console-content">
                         <pre><code class="language-java">
-// Classe Parente ()
+// Classe Parente (Superclasse)
+public class Character {
+    protected String name; // protected permite que os filhos acessem
+
+    public Character(String name) {
+        this.name = name;
+    }
+
+    public void action() {
+        System.out.println(name + " realiza uma ação genérica.");
+    }
+}
+
+// Classe Filha (Subclasse usando 'extends')
+public class Warrior extends Character {
+
+    public Warrior(String name) {
+        super(name); // Repassa o nome para o construtor do Pai
+    }
+
+    // Polimorfismo: Sobrescrevendo o método do Pai
+    @Override
+    public void action() {
+        System.out.println(name + " ataca ferozmente com sua espada! ⚔️");
+    }
+}
+
+// No Main:
+public class Main {
+    public static void main(String[] args) {
+        // Polimorfismo na prática: a variável é Character, mas o objeto é Warrior
+        Character hero = new Warrior("Carlos");
+
+        hero.action(); // Saída: Carlos ataca ferozmente com sua espada! ⚔️
+    }
+}
                         </code></pre>
                     </div>
                 </div>
@@ -117,25 +152,130 @@
         <section id="abstract-classes-and-interfaces" class="sub-topic">
             <div class="sub-topic-title">
                 <h2>
-
+                    Classes Abstratas e Interfaces 🏗️
                 </h2>
             </div>
 
             <div class="sub-topic-content">
+                <p class="sub-topic-description">
+                    Em projetos grandes, às vezes precisamos forçar regras. Queremos garantir que toda classe que representar um "Inimigo" tenha, obrigatoriamente, um método de atacar. Para isso usamos as Classes Abstratas e as Interfaces.
+                </p>
 
+                <h3>Classes Abstratas ☁️</h3>
+                <p class="sub-topic-description">
+                    São classes que servem <strong>apenas como molde</strong>. Você não pode usar o `new` nelas. Elas podem ter código pronto para os filhos herdarem, mas também podem ter "métodos abstratos" (métodos sem corpo) que os filhos são obrigados a preencher.
+                </p>
+
+                <h3>Interfaces 📜</h3>
+                <p class="sub-topic-description">
+                    A Interface é um <strong>contrato 100% rígido</strong>. Nela, você só diz "o que" o objeto deve fazer, sem dizer "como". Uma classe pode assinar esse contrato usando a palavra <code>implements</code>.
+                </p>
+
+                <div class="console-code">
+                    <div class="console-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+
+                    <div class="console-content">
+                        <pre><code class="language-java">
+// A Interface (O Contrato)
+public interface Playable {
+    void pressStart(); // Quem implementar, é OBRIGADO a ter esse método
+}
+
+// A Classe assinando o contrato
+public class Game implements Playable {
+    private String title = "Java Quest";
+
+    @Override
+    public void pressStart() {
+        System.out.println("Iniciando o jogo: " + title + " 🎮");
+    }
+}
+                        </code></pre>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="packages-and-code-organization" class="sub-topic">
             <div class="sub-topic-title">
                 <h2>
-
+                    Pacotes e Organização de Código 📁
                 </h2>
             </div>
 
             <div class="sub-topic-content">
+                <p class="sub-topic-description">
+                    Quando seu projeto passa de 5 ou 10 classes, deixá-las todas na mesma pasta vira um caos. No Java, nós separamos nosso código em <strong>Packages</strong> (Pacotes), que nada mais são do que pastas no seu computador.
+                </p>
 
+                <ul class="sub-topic-list">
+                    <li class="sub-topic-list-item">
+                        <strong>Package:</strong> A primeira linha de qualquer classe Java diz em qual pasta ela mora.
+                    </li>
+                    <li class="sub-topic-list-item">
+                        <strong>Import:</strong> Se você precisa usar uma classe que está em outra pasta, você tem que "importá-la" para o seu arquivo atual.
+                    </li>
+                </ul>
+
+                <blockquote class="sub-topic-blockquote">
+                    <strong>Padrão de Mercado:</strong> As empresas geralmente nomeiam pacotes com o domínio do site ao contrário. Exemplo: <code>br.com.monitoria.models</code>. Isso garante que nunca haverá conflito de nomes, mesmo se você juntar o seu código com o de outra empresa! 🌐
+                </blockquote>
+
+                <div class="console-code">
+                    <div class="console-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+
+                    <div class="console-content">
+                        <pre><code class="language-java">
+// ARQUIVO: src/com/monitoria/models/Student.java
+package com.monitoria.models; // Declarando onde a classe mora
+
+public class Student {
+    public String name = "Carlos";
+}
+
+// --------------------------------------------------------
+
+// ARQUIVO: src/com/monitoria/main/System.java
+package com.monitoria.main; // Mora em outra pasta
+
+import com.monitoria.models.Student; // Trazendo a classe para cá!
+
+public class System {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+    }
+}
+                        </code></pre>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <div class="more-content">
+            <div class="notebook-body">
+                <div class="notebook-face">
+                    <div class="notebook-face-decoration">
+                        <img src="{{url_for('static', filename='img/gojira3.webp')}}" alt="Gojira Illustration">
+                    </div>
+
+                    <div class="notebook-content">
+                        <span>
+                            Para conteúdos mais avançados, consulte a:
+                            <a href="https://docs.oracle.com/en/java/javase/" target="_blank" rel="noopener noreferrer">
+                                Documentação Oficial do Java
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 {% endblock %}

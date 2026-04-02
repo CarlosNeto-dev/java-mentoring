@@ -14,7 +14,7 @@
       </p>
 
       <h3>
-        Vamos dividir essa jornada em três pilares fundamentais 🧬:
+        Vamos dividir essa jornada nos seguintes pilares fundamentais 🧬:
       </h3>
 
       <ul class="main-topic-list">
@@ -27,26 +27,29 @@
         </li>
 
         <li class="main-topic-list-item">
-          <strong>🛣️ 2.3 Controle de Fluxo: Aqui é onde o seu programa ganha "vida". Vamos dominar as estruturas de decisão como if/else e switch, permitindo que o seu software execute caminhos diferentes baseados em condições reais de uso.</strong>
+          <strong>⌨️ 2.3 Entrada de Dados (Scanner): Aprenda a interagir com o usuário, capturando textos e números digitados no teclado para dar interatividade ao seu software.</strong>
         </li>
 
         <li class="main-topic-list-item">
-          <strong>🏗️ 2.4 Métodos: O primeiro passo para o Código Limpo. Aprenda a organizar blocos de lógica reutilizáveis, evitando repetição de código (Princípio DRY - Don't Repeat Yourself).</strong>
+          <strong>🛣️ 2.4 Controle de Fluxo e Loops: Aqui é onde o seu programa ganha "vida" e escala. Vamos dominar as estruturas de decisão (if/else) e automatizar tarefas repetitivas com for, while e do-while.</strong>
         </li>
 
         <li class="main-topic-list-item">
-          <strong>🔄 2.5 Estruturas de Repetição (Loops): Aprenda a automatizar tarefas repetitivas com for, while e do-while. É aqui que você ganha escala e performance.</strong>
+          <strong>🏗️ 2.5 Métodos: O primeiro passo para o Código Limpo. Aprenda a organizar blocos de lógica reutilizáveis, evitando repetição de código (Princípio DRY - Don't Repeat Yourself).</strong>
         </li>
 
         <li class="main-topic-list-item">
-          <strong>🧬 2.6 - Programação Orientada a Objetos (POO): Saímos das linhas de código isoladas e passamos a pensar em objetos reais.</strong>
+          <strong>🛡️ 2.6 Tratamento de Erros: O seguro de vida do seu código. Como prever falhas e usar o try-catch para impedir que o sistema "quebre" na mão do usuário.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🧬 2.7 Programação Orientada a Objetos (POO): Saímos das linhas de código isoladas e passamos a pensar em objetos reais.</strong>
         </li>
       </ul>
 
       <blockquote class="main-topic-blockquote">
-        <strong>💡 Insight do Carlos:</strong>
-
-        "Olha, eu sei que no começo a sintaxe do Java pode parecer um pouco rígida, cheia de regras, pontos e vírgulas. Pode até bater aquele desânimo quando o compilador reclama de uma chave esquecida. 😅 Mas escuta o que eu te digo: cada erro que você resolve hoje é um neurônio a mais na sua rede de conhecimento. 🧠
+        <strong>💡 Insight do Carlos:</strong><br><br>
+        "Olha, eu sei que no começo a sintaxe do Java pode parecer um pouco rígida, cheia de regras, pontos e vírgulas. Pode até bater aquele desânimo quando o compilador reclama de uma chave esquecida. 😅 Mas escuta o que eu te digo: cada erro que você resolve hoje é um neurônio a mais na sua rede de conhecimento. 🧠<br><br>
         Na jornada para ser um especialista em IA, essa base é o seu alicerce. Por mais difícil que a curva de aprendizado pareça agora, dominar essa fundação vai te dar a liberdade de construir sistemas incríveis no futuro. Mantenha a disciplina, melhore 1% a cada dia e não desista. O esforço vai valer muito a pena! 🦖🚀"
       </blockquote>
     </div>
@@ -201,7 +204,6 @@ public class Main {
           <strong>
             ⚠️ Atenção:
           </strong>
-
           Existe também o tipo <strong>String</strong>, que usamos para textos (como seu nome "Carlos", "Maria" etc...). No Java, String <strong>não é um tipo primitivo</strong>, mas sim uma Classe, por isso sempre começa com <strong>S</strong> maiúsculo! ⚠️
         </blockquote>
 
@@ -218,13 +220,11 @@ public class Main {
         <ul class="sub-topic-list">
           <li class="sub-topic-list-item">
             <strong>CamelCase🐫:</strong>
-
             Comece com letra minúscula e cada palavra seguinte com maiúscula (ex: minhaVariavel, valorBolsaEstagio).
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Seja descritivo📔:</strong>
-
             Nada de criar variáveis chamadas a, b ou x. Use nomes que expliquem o que o dado é (ex: salarioMensal).
           </li>
         </ul>
@@ -244,21 +244,19 @@ public class Main {
         <ul class="sub-topic-list">
           <li class="sub-topic-list-item">
             <strong>Divisão Inteira(/):</strong>
-
             Se você usar números inteiros, o Java vai descartar o que vem depois da vírgula. 🪓
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Módulo(%):</strong>
-
             Ele não te dá o resultado da divisão, mas sim o resto que sobrou dela. É perfeito para verificar se um número é par ou ímpar! ⚖️
           </li>
         </ul>
 
         <h3>Matemática na Prática:</h3>
-        
+
         <p class="sub-topic-description">Veja como o Java se comporta com números inteiros e como o resto da divisão funciona. 🧮</p>
-      
+
         <div class="console-code">
           <div class="console-dots">
             <span class="dot-red"></span>
@@ -277,7 +275,7 @@ public class Main {
     int restOfDivision = number1 % number2;
 
     System.out.println(division); // Saída: 3
-    System.out.println(module); // Saída: 1
+    System.out.println(restOfDivision); // Saída: 1
   }
 }
             </code></pre>
@@ -376,7 +374,6 @@ public class Main {
     boolean isOnList = false;
 
     boolean canEnter = haveInvite || isOnList;
-
     boolean vipAcess = haveInvite && isOnList;
 
     System.out.println(canEnter); // Saída: true
@@ -389,6 +386,83 @@ public class Main {
       </div>
     </section>
 
+    <section id="scanner-input" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Entrada de Dados com Scanner ⌨️</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          Até agora, nossos programas usaram valores fixos no código. Mas e se você quiser que o usuário digite algo? Para isso, o Java usa a classe <strong>Scanner</strong>. Ela funciona como um "leitor" que captura tudo o que é digitado no console.
+        </p>
+
+        <h3>
+          <strong>
+            Passo a Passo para Ler Dados
+          </strong>
+        </h3>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>1. Importar 📦:</strong>
+            O Scanner não vem ativado por padrão. Precisamos "puxar" ele da biblioteca do Java adicionando <code>import java.util.Scanner;</code> na primeira linha do seu arquivo.
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>2. Instanciar 🛠️:</strong>
+            É necessário ligar o leitor do teclado criando o objeto Scanner (vamos ver mais sobre objetos na seção de POO).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>3. Ler 📖:</strong>
+            Usar comandos específicos como: <code>nextLine():</code> Para ler textos inteiros(linhas completas) <code>nextInt():</code> Para ler números inteiros. <code>nextDouble():</code> Para ler números com vírgula/ponto (decimais). <code>next:</code> Para ler uma única palavra.
+          </li>
+        </ul>
+
+        <h3>Conversando com o Usuário</h3>
+
+        <p class="sub-topic-description">
+          Um programa interativo que pergunta o seu nome e a sua idade, e depois responde! 🗣️
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+import java.util.Scanner; // 1. Importação obrigatória!
+
+public class Main {
+  public static void main(String[] args) {
+    // 2. Ligando o leitor do teclado
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Qual é o seu nome? ");
+    String name = scanner.nextLine(); // 3. Lê um texto
+
+    System.out.print("Quantos anos você tem? ");
+    int age = scanner.nextInt(); // Lê um número
+
+    System.out.println("Olá " + name + ", você tem " + age + " anos!");
+
+    // 4. Sempre feche o scanner no final para liberar memória!
+    scanner.close();
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <blockquote class="sub-topic-blockquote">
+          <strong>⚠️ A Pegadinha do Scanner (Bug do Enter):</strong><br><br>
+          Se você usar <code>nextInt()</code> para ler um número e logo depois tentar usar <code>nextLine()</code> para ler um texto, o programa vai "pular" a leitura do texto. Isso acontece porque o <code>nextInt()</code> não consome o "Enter" que você apertou. A solução? Coloque um <code>scanner.nextLine();</code> vazio logo após ler o número, só para "limpar o lixo" deixado pelo Enter! 🐛🔨
+        </blockquote>
+      </div>
+    </section>
     <section id="conditionals-and-loops" class="sub-topic">
       <div class="sub-topic-title">
         <h2>Controle de Fluxo: Condicionais e Loops🚥</h2>
@@ -457,21 +531,19 @@ public class Main {
 
         <ul class="sub-topic-list">
           <li class="sub-topic-list-item">
-            <strong>Início:</strong> 
-
+            <strong>Início:</strong>
             int i = 0 (Começamos do zero).
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Condição:</strong>
-
             i < 5 (Enquanto i for menor que 5, continue rodando).
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Incremento:</strong>
-
             i++ (A cada volta, some +1 no valor de i)
+          </li>
         </ul>
 
         <h3>Contagem Inteligente</h3>
@@ -492,7 +564,7 @@ public class Main {
 public class Main {
   public static void main(String[] args) {
     // Vai imprimir de 0 a 5
-    
+
     for (int i = 0; i <= 5; i++) {
       System.out.println("Count:" + i);
     }
@@ -523,12 +595,12 @@ public class Main {
         </p>
 
         <div class="console-code">
-          <div class="console-header">
+          <div class="console-dots">
             <span class="dot-red"></span>
             <span class="dot-yellow"></span>
             <span class="dot-green"></span>
           </div>
-      
+
           <div class="console-content">
             <pre><code class="language-java">
 public class Main {
@@ -542,11 +614,11 @@ public class Main {
 
     System.out.println("Charge Complete! 🔋✅");
   }
-}                 
+}
             </code></pre>
           </div>
         </div>
-        
+
         <h3>
           <strong>
             O Laço do-while 🔁❓
@@ -585,12 +657,12 @@ public class Main {
     do {
       System.out.println("Battery: " + battery + "%");
       battery++;
-    } 
-    
+    }
+
     while (battery < 100);
 
-    // No 'while' comum, nada seria impresso. 
-    // No 'do-while', ele imprime "Carga atual: 120%" e depois para.
+    // No 'while' comum, nada seria impresso.
+    // No 'do-while', ele imprime "Battery: 120%" e depois para.
   }
 }
             </code></pre>
@@ -610,7 +682,7 @@ public class Main {
             O que é um Método? 🛠️
           </strong>
         </h3>
-  
+
         <p class="sub-topic-description">Pense em um método como uma <strong>ferramenta</strong> ou uma <strong>receita.</strong> Em vez de escrever a mesma lógica dez vezes, você cria um método uma única vez e o "chama" sempre que precisar.</p>
 
         <h3>Um método básico em Java tem:</h3>
@@ -618,19 +690,16 @@ public class Main {
         <ul class="sub-topic-list">
           <li class="sub-topic-list-item">
             <strong>Tipo de Retorno:</strong>
-
             O que ele devolve (ex: int, String, ou void se não devolver nada).
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Nome:</strong>
-
             O que ele faz (ex: somar, imprimirNome).
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Parâmetros:</strong>
-
             O que ele precisa para funcionar (fica dentro dos parênteses).
           </li>
         </ul>
@@ -755,8 +824,8 @@ public class Main {
     try {
       int result = 10 / 0; // Isso gera um erro!
       System.out.println(result);
-    } 
-    
+    }
+
     catch (ArithmeticException e) {
       // O código vem para cá se houver erro matemático
       System.err.println("ERRO: Não é possível dividir por zero!");
@@ -789,10 +858,10 @@ public class Main {
           <div class="console-content">
             <pre><code class="language-java">
 public class Main {
-  public class void main(String[] args) {
+  public static void main(String[] args) {
     try {
       System.out.println("Tentando abrir o arquivo...📂");
-      // Lógica aqui 
+      // Lógica aqui
     }
 
     catch (Exception e) {
@@ -829,13 +898,11 @@ public class Main {
         <ul class="sub-topic-list">
           <li class="sub-topic-list-item">
             <strong>Classe:</strong>
-
             É o projeto (a planta) no papel. Ela diz que a casa deve ter janelas, portas e uma cor, mas a planta em si não é uma casa onde você pode morar. 📝
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Objeto:</strong>
-
             É a casa construída na vida real usando aquela planta. Você pode construir várias casas (objetos) diferentes (uma azul, uma amarela) usando o mesmo projeto (classe). 🏠
           </li>
         </ul>
@@ -849,13 +916,11 @@ public class Main {
         <ul class="sub-topic-list">
           <li class="sub-topic-list-item">
             <strong>Atributos:</strong>
-
             São as características (cor, tamanho, modelo). 🎨
           </li>
 
           <li class="sub-topic-list-item">
             <strong>Métodos:</strong>
-
             São as ações (abrir porta, ligar luz). ⚡
           </li>
         </ul>
@@ -882,21 +947,20 @@ public class Main {
           <div class="console-dots">
             <span class="dot-red"></span>
             <span class="dot-yellow"></span>
-            <span class="dot-green"></span>         
+            <span class="dot-green"></span>
           </div>
 
           <div class="console-content">
             <pre><code class="language-java">
 public class Phone {
   // Atributos (Características)
-
   String mark;
   String model;
   int battery = 100;
 
   // Métodos (Ação)
   void connect() {
-    System.out.println("Phone" + model + "Connecting...");
+    System.out.println("Phone " + model + " Connecting...");
   }
 }
             </code></pre>
@@ -961,19 +1025,16 @@ public class Main {
           <ul class="sub-topic-list">
             <li class="sub-topic-list-item">
               <strong>A Classe é o DNA:</strong>
-
               Ela contém todas as instruções de como algo deve ser, mas ela sozinha não "existe" no mundo real. 🧬
             </li>
 
             <li class="sub-topic-list-item">
               <strong>O new é a Máquina de Clonagem:</strong>
-
               Quando você digita new, o Java vai lá no DNA (Classe) e cria uma cópia exata dele na memória do computador. 🏗️
             </li>
 
             <li class="sub-topic-list-item">
               <strong>O Objeto é o "Apelido":</strong>
-
               A variável que você cria (ex: meuCelular) é apenas o apelido que você dá para aquele clone específico.
             </li>
           </ul>
@@ -991,7 +1052,7 @@ public class Main {
           <div class="notebook-content">
             <span>
               Para conteúdos mais avançados, consulte a:
-              <a href="https://docs.oracle.com/en/java/javase/" target="_blank">
+              <a href="https://docs.oracle.com/en/java/javase/" target="_blank" rel="noopener noreferrer">
                 Documentação Oficial do Java
               </a>
             </span>

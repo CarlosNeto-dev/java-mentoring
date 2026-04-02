@@ -21,34 +21,35 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: red;
     padding: clamp(1.25rem, 2.5vw, 3rem);
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(15px);
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-    transition: all 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
   }
   .header-home .navbar-mobile ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
-    margin-left: -20rem;
     gap: clamp(1rem, 1.5vw, 2rem);
-  }
-  .header-home .navbar-mobile ul li {
-    padding: 0.2rem 0.75rem;
+    transform: translateX(-20rem);
+    transition: transform 500ms ease-in-out;
   }
   .header-home .navbar-mobile ul li a {
+    display: block;
     text-decoration: none;
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.8);
+    padding: 0.2rem 0.75rem;
+    border-bottom: 1px solid transparent;
     transition: all 500ms ease-in-out;
+    will-change: transform;
   }
   .header-home .navbar-mobile ul li a:hover {
-    border-bottom: 1px solid white;
+    border-bottom-color: white;
   }
   .header-home .navbar-mobile ul li a:active {
     transform: scale(0.9);
@@ -58,8 +59,7 @@
     visibility: visible;
   }
   .header-home .navbar-mobile.active ul {
-    margin-left: 0;
-    transition: all 500ms ease-in-out;
+    transform: translateX(0);
   }
 }
 .header-home .wrapper-header {
@@ -88,6 +88,8 @@
     transition: all 500ms ease-in-out;
     border: none;
     background: none;
+    cursor: pointer;
+    will-change: transform;
   }
   .header-home .wrapper-header .mobile-menu-button:hover {
     background: rgba(255, 255, 255, 0.4);
@@ -115,7 +117,7 @@
   padding: 1rem;
 }
 @media screen and (max-width: 800px) {
-  .header-home .wrapper-header .navbar-desktop nav {
+  .header-home .wrapper-header .navbar-desktop {
     display: none;
   }
 }
@@ -124,20 +126,20 @@
   display: flex;
   gap: clamp(1rem, 1.5vw, 2rem);
 }
-.header-home .wrapper-header .navbar-desktop nav ul li {
-  padding: 0.2rem 0.75rem;
-  transition: all 500ms ease-in-out;
-  border-bottom: 1px solid transparent;
-  cursor: pointer;
-}
-.header-home .wrapper-header .navbar-desktop nav ul li:hover {
-  border-bottom-color: white;
-}
-.header-home .wrapper-header .navbar-desktop nav ul li:active {
-  transform: scale(0.9);
-}
 .header-home .wrapper-header .navbar-desktop nav ul li a {
+  display: block;
   text-decoration: none;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: white;
+  padding: 0.2rem 0.75rem;
+  border-bottom: 1px solid transparent;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  will-change: transform;
+}
+.header-home .wrapper-header .navbar-desktop nav ul li a:hover {
+  border-bottom-color: white;
+}
+.header-home .wrapper-header .navbar-desktop nav ul li a:active {
+  transform: scale(0.9);
 }/*# sourceMappingURL=header-home.css.map */

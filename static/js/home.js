@@ -9,4 +9,3 @@ barsMobileBtn.addEventListener("click", () => {
   barsMobileBtn.classList.toggle("active");
   body.classList.toggle("no-scroll");
 })
-

@@ -1,8 +1,7 @@
 .main-home {
     .hero-section {
         position: relative;
-        min-height: clamp(650px, 100vh, 1180px);
-        padding-bottom: clamp(15rem, 25vh, 25rem);
+        min-height: clamp(950px, 100vh, 1180px);
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -10,9 +9,10 @@
         flex-direction: column;
         background-color: #000000;
         background-image:
-        radial-gradient(at 50% 100%, rgba(0, 112, 243, 0.2) 0px, transparent 50%),
-        radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 30%);
+            radial-gradient(at 50% 100%, rgba(0, 112, 243, 0.2) 0px, transparent 50%),
+            radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 30%);
         padding: clamp(1.25rem, 2.5vw, 3rem);
+        padding-bottom: clamp(42rem, 45vh, 50rem);
         z-index: 999;
 
         &::after {
@@ -23,7 +23,7 @@
             height: 20vh;
             background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.15));
             pointer-events: none;
-            z-index: -1
+            z-index: -1;
         }
 
         .welcome-div {
@@ -32,14 +32,12 @@
             justify-content: center;
             align-items: center;
             gap: clamp(1rem, 1.5vw, 3rem);
-            margin-top: clamp(8rem, 15vh, 16rem);
-
+            margin-top: clamp(2rem, 5vh, 8rem);
 
             .div-title {
                 display: flex;
                 align-items: center;
                 gap: clamp(.75rem, 1.25vw, 2rem);
-
 
                 h1 {
                     color: white;
@@ -74,7 +72,7 @@
             gap: clamp(3rem, 3.5vw, 5rem);
             padding: clamp(1rem, 1.5vw, 2rem);
             height: clamp(35rem, 50vw, 65rem);
-            max-width: clamp(35rem, 65rem, 180rem);
+            max-width: clamp(35rem, 80vw, 120rem);
             width: 100%;
             border-radius: 2rem;
             background-color: #0a0a0a;
@@ -94,7 +92,7 @@
 
             .book-format {
                 position: absolute;
-                top: clamp(-6rem, 8vw, -12.5rem);
+                top: clamp(-8rem, -6vw, -5rem);
                 background: white;
                 box-shadow:
                     inset -10px 0 20px rgba(0, 0, 0, 0.1),
@@ -166,6 +164,7 @@
                 border-radius: 2rem;
                 cursor: pointer;
                 transition: all 500ms ease-in-out;
+                will-change: transform, background-color;
 
                 &:hover {
                     background: rgba(255, 255, 255, 0.65);
@@ -205,8 +204,7 @@
         padding-top: clamp(15rem, 25vh, 25rem);
         position: relative;
         background-color: #000000;
-        background-image:
-            radial-gradient(at 50% 0%, rgba(0, 112, 243, 0.1) 0px, transparent 40%);
+        background-image: radial-gradient(at 50% 0%, rgba(0, 112, 243, 0.1) 0px, transparent 40%);
 
         &::after {
             content: "";
@@ -250,10 +248,10 @@
         .dynamic-content {
           display: grid;
           grid-template-areas:
-          "demonstration-1 text-content1"
-          "text-content2 demonstration-2";
+          "demonstration-1 text-content-1"
+          "text-content-2 demonstration-2";
           grid-template-columns: max-content max-content;
-          grid-template-rows: 2fr 2fr;
+          grid-template-rows: repeat(2, 1fr);
           place-items: center;
           justify-content: center;
           padding: clamp(1.5rem, 2vw, 3rem);
@@ -275,8 +273,8 @@
           }
 
           .demonstration-1 {grid-area: demonstration-1;}
-          .text-content-1 {grid-area: text-content1;}
-          .text-content-2 {grid-area: text-content2;}
+          .text-content-1 {grid-area: text-content-1;}
+          .text-content-2 {grid-area: text-content-2;}
           .demonstration-2 {grid-area: demonstration-2;}
         }
     }
@@ -284,6 +282,7 @@
     .material-section {
         min-height: 100vh;
         position: relative;
+        padding-top: clamp(12rem, 15vh, 20rem);
         background-color: #0a0a0a;
         background-image:
         radial-gradient(at 0% 50%, rgba(255, 255, 255, 0.02) 0px, transparent 50%),
@@ -305,25 +304,20 @@
 
         .topics-div {
           display: grid;
-          grid-template-areas:
-          "book1 book2 book3 book4";
+          grid-template-areas: "book1 book2 book3 book4";
           grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: auto;
           background-color: #0d0d0c;
           background-image:
-
             radial-gradient(
               circle at 50% 50%,
               rgba(255, 255, 255, 0.03) 0%,
               transparent 70%
             ),
-
             radial-gradient(
               circle at 50% 100%,
               rgba(0, 0, 0, 0.9) 0%,
               transparent 100%
             ),
-
             radial-gradient(
               circle at 1px 1px,
               rgba(255, 255, 255, 0.02) 1px,
@@ -344,7 +338,14 @@
           .book-topic-format3 {grid-area: book3;}
           .book-topic-format4 {grid-area: book4;}
 
-            @media screen and (max-width: 700px) {
+          @media screen and (max-width: 1200px) {
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-areas:
+              "book1 book2"
+              "book3 book4";
+          }
+
+          @media screen and (max-width: 700px) {
               display: flex;
               align-items: center;
               justify-content: center;
@@ -406,6 +407,7 @@
             color: #000;
             box-shadow: 0 10px 30px rgba(0, 112, 243, 0.3);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            will-change: transform, box-shadow;
 
             &:hover {
               background: #0070f3;
@@ -414,6 +416,7 @@
               box-shadow: 0 15px 40px rgba(0, 112, 243, 0.6);
               letter-spacing: 3px;
             }
+
             &:active {
               transform: scale(0.9);
             }

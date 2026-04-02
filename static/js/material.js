@@ -26,10 +26,3 @@ document.querySelectorAll('.chapter-accordion').forEach(details => {
     }
   });
 });
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    if (typeof Prism !== 'undefined') {
-        Prism.highlightAll();
-        console.log("Prism disparado com sucesso!");
-    }
-});

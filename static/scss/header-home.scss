@@ -22,7 +22,6 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background: red;
       padding: clamp(1.25rem, 2.5vw, 3rem);
       background-color: rgba(0, 0, 0, 0.9);
       -webkit-backdrop-filter: blur(15px);
@@ -30,32 +29,35 @@
       z-index: -1;
       opacity: 0;
       visibility: hidden;
-      transition: all 500ms ease-in-out;
+      transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
 
       ul {
         list-style: none;
         display: flex;
         flex-direction: column;
         margin-top: 10rem;
-        margin-left: -20rem;
         gap: clamp(1rem, 1.5vw, 2rem);
+        transform: translateX(-20rem);
+        transition: transform 500ms ease-in-out;
 
         li {
-          padding: .2rem .75rem;
-
           a {
+            display: block;
             text-decoration: none;
             font-size: 2.5rem;
             color: rgba(255, 255, 255, 0.8);
+            padding: .2rem .75rem;
+            border-bottom: 1px solid transparent;
             transition: all 500ms ease-in-out;
+            will-change: transform;
 
-          &:hover {
-            border-bottom: 1px solid white;
-          }
+            &:hover {
+              border-bottom-color: white;
+            }
 
-          &:active {
-            transform: scale(0.9);
-          }
+            &:active {
+              transform: scale(0.9);
+            }
           }
         }
       }
@@ -65,8 +67,7 @@
         visibility: visible;
 
         ul {
-          margin-left: 0;
-          transition: all 500ms ease-in-out;
+          transform: translateX(0);
         }
       }
     }
@@ -85,7 +86,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
 
-  .mobile-menu-button {
+    .mobile-menu-button {
       display: none;
     }
 
@@ -99,6 +100,8 @@
         transition: all 500ms ease-in-out;
         border: none;
         background: none;
+        cursor: pointer;
+        will-change: transform;
 
         &:hover {
           background: rgba(255, 255, 255, 0.4);
@@ -133,35 +136,35 @@
       justify-content: center;
       padding: 1rem;
 
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+
       nav {
-
-        @media screen and (max-width: 800px) {
-          display: none;
-        }
-
         ul {
           list-style: none;
           display: flex;
           gap: clamp(1rem, 1.5vw, 2rem);
 
           li {
-          padding: .2rem .75rem;
-          transition: all 500ms ease-in-out;
-          border-bottom: 1px solid transparent;
-          cursor: pointer;
-
-          &:hover {
-            border-bottom-color: white;
-          }
-
-          &:active {
-            transform: scale(0.9);
-          }
-
             a {
+              display: block;
               text-decoration: none;
               font-size: clamp(1rem, 1.5vw, 1.5rem);
               color: white;
+              padding: .2rem .75rem;
+              border-bottom: 1px solid transparent;
+              transition: all 500ms ease-in-out;
+              cursor: pointer;
+              will-change: transform;
+
+              &:hover {
+                border-bottom-color: white;
+              }
+
+              &:active {
+                transform: scale(0.9);
+              }
             }
           }
         }

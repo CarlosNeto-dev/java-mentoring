@@ -1,7 +1,6 @@
 .main-home .hero-section {
   position: relative;
-  min-height: clamp(650px, 100vh, 1180px);
-  padding-bottom: clamp(15rem, 25vh, 25rem);
+  min-height: clamp(950px, 100vh, 1180px);
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -10,6 +9,7 @@
   background-color: #000000;
   background-image: radial-gradient(at 50% 100%, rgba(0, 112, 243, 0.2) 0px, transparent 50%), radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 30%);
   padding: clamp(1.25rem, 2.5vw, 3rem);
+  padding-bottom: clamp(42rem, 45vh, 50rem);
   z-index: 999;
 }
 .main-home .hero-section::after {
@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   gap: clamp(1rem, 1.5vw, 3rem);
-  margin-top: clamp(8rem, 15vh, 16rem);
+  margin-top: clamp(2rem, 5vh, 8rem);
 }
 .main-home .hero-section .welcome-div .div-title {
   display: flex;
@@ -61,7 +61,7 @@
   gap: clamp(3rem, 3.5vw, 5rem);
   padding: clamp(1rem, 1.5vw, 2rem);
   height: clamp(35rem, 50vw, 65rem);
-  max-width: 65rem;
+  max-width: clamp(35rem, 80vw, 120rem);
   width: 100%;
   border-radius: 2rem;
   background-color: #0a0a0a;
@@ -78,7 +78,7 @@
 }
 .main-home .hero-section .div-get-started .book-format {
   position: absolute;
-  top: clamp(-6rem, 8vw, -12.5rem);
+  top: clamp(-8rem, -6vw, -5rem);
   background: white;
   box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.1), 10px 20px 40px rgba(0, 0, 0, 0.3);
   border-top-right-radius: 2rem;
@@ -140,6 +140,7 @@
   border-radius: 2rem;
   cursor: pointer;
   transition: all 500ms ease-in-out;
+  will-change: transform, background-color;
 }
 .main-home .hero-section .div-get-started button:hover {
   background: rgba(255, 255, 255, 0.65);
@@ -209,9 +210,9 @@
 }
 .main-home .dynamic-section .dynamic-content {
   display: grid;
-  grid-template-areas: "demonstration-1 text-content1" "text-content2 demonstration-2";
+  grid-template-areas: "demonstration-1 text-content-1" "text-content-2 demonstration-2";
   grid-template-columns: max-content max-content;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
   place-items: center;
   justify-content: center;
   padding: clamp(1.5rem, 2vw, 3rem);
@@ -236,10 +237,10 @@
   grid-area: demonstration-1;
 }
 .main-home .dynamic-section .dynamic-content .text-content-1 {
-  grid-area: text-content1;
+  grid-area: text-content-1;
 }
 .main-home .dynamic-section .dynamic-content .text-content-2 {
-  grid-area: text-content2;
+  grid-area: text-content-2;
 }
 .main-home .dynamic-section .dynamic-content .demonstration-2 {
   grid-area: demonstration-2;
@@ -247,6 +248,7 @@
 .main-home .material-section {
   min-height: 100vh;
   position: relative;
+  padding-top: clamp(12rem, 15vh, 20rem);
   background-color: #0a0a0a;
   background-image: radial-gradient(at 0% 50%, rgba(255, 255, 255, 0.02) 0px, transparent 50%), radial-gradient(at 100% 50%, rgba(255, 255, 255, 0.02) 0px, transparent 50%);
   display: flex;
@@ -267,7 +269,6 @@
   display: grid;
   grid-template-areas: "book1 book2 book3 book4";
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
   background-color: #0d0d0c;
   background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%), radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.9) 0%, transparent 100%), radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.02) 1px, transparent 0);
   background-size: 100% 100%, 100% 100%, 4px 4px;
@@ -288,6 +289,12 @@
 }
 .main-home .material-section .topics-div .book-topic-format4 {
   grid-area: book4;
+}
+@media screen and (max-width: 1200px) {
+  .main-home .material-section .topics-div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "book1 book2" "book3 book4";
+  }
 }
 @media screen and (max-width: 700px) {
   .main-home .material-section .topics-div {
@@ -347,6 +354,7 @@
   color: #000;
   box-shadow: 0 10px 30px rgba(0, 112, 243, 0.3);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform, box-shadow;
 }
 .main-home .material-section .more-content button:hover {
   background: #0070f3;

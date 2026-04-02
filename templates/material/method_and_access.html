@@ -3,7 +3,7 @@
 {% block title %} Métodos e Acessos 🔐 {% endblock %}
 
 {% block material_content %}
-    <main id="method-and-acess" class="main-topic">
+    <main id="method-and-access" class="main-topic">
         <div class="main-topic-title">
             <h1>Métodos e Acessos do <span>Java</span> 🔐</h1>
         </div>
@@ -23,7 +23,7 @@
                 </li>
 
                 <li class="main-topic-list-item">
-                    <strong>🛡️ 3.2 Encapsulamento e Abstração:</strong> Aprenda a criar "portas de segurança" para seus dados. Vamos dominar o uso de <strong>Getters e Setters</strong> e, entender como esconder a complexidade interna de uma classe, entregando para o usuário apenas o que é essencial para ele interagir.
+                    <strong>🛡️ 3.2 Encapsulamento e Abstração:</strong> Aprenda a criar "portas de segurança" para seus dados. Vamos dominar o uso de <strong>Getters e Setters</strong> e entender como esconder a complexidade interna de uma classe, entregando para o usuário apenas o que é essencial para ele interagir.
                 </li>
 
                 <li class="main-topic-list-item">
@@ -36,7 +36,7 @@
             </blockquote>
         </div>
 
-        <section id="method-and-access" class="sub-topic">
+        <section id="access-modifiers" class="sub-topic">
             <div class="sub-topic-title">
                 <h2>Métodos de Acesso 🔒</h2>
             </div>
@@ -61,10 +61,7 @@
                 </p>
 
                 <blockquote class="sub-topic-blockquote">
-                    <strong>
-                        Uso comum:
-                    </strong>
-
+                    <strong>Uso comum:</strong>
                     Métodos que precisam ser chamados de qualquer lugar e a própria declaração da Classe.
                 </blockquote>
 
@@ -79,10 +76,7 @@
                 </p>
 
                 <blockquote class="sub-topic-blockquote">
-                    <strong>
-                        Uso comum:
-                    </strong>
-
+                    <strong>Uso comum:</strong>
                     Atributos sensíveis (como CPF, Senha, Saldo).
                 </blockquote>
 
@@ -118,7 +112,7 @@ public class Main {
         Account acc = new Account();
 
         acc.holder = "Carlos"; // Funciona (é public) ✅
-        acc.balance = 5000; // ERRO DE COMPILAÇÃO! 🚫
+        // acc.balance = 5000; // ERRO DE COMPILAÇÃO! 🚫
         // O campo balance é invisível aqui.
 
         acc.deposit(150.5); // Única forma de mexer no saldo ✅
@@ -134,25 +128,23 @@ public class Main {
                     </strong>
                 </h3>
 
-                <p class="sub-topic-description">O protected é um modificador de acesso focado em <strong>Herança.</strong> Ele é mais restrito que o public, mas menos fechado que o private.</p>
+                <p class="sub-topic-description">
+                    O protected é um modificador de acesso focado em <strong>Herança.</strong> Ele é mais restrito que o public, mas menos fechado que o private.
+                </p>
 
                 <ul class="sub-topic-list">
                     <li class="sub-topic-list-item">
-                        <strong>A Regra:</strong> 
-                        
+                        <strong>A Regra:</strong>
                         Atributos ou métodos protected podem ser acessados por classes que estão no mesmo pacote OU por qualquer subclasse (filhos), mesmo que estejam em pacotes diferentes.
                     </li>
 
                     <li class="sub-topic-list-item">
                         <strong>O Insight:</strong>
-
                         Imagine que o private é um segredo que só você sabe. O protected é um segredo de família: seus filhos e parentes próximos podem saber, mas estranhos na rua não. 🏠
                     </li>
                 </ul>
 
-                <h3>
-                    Herança e o Acesso Protegido
-                </h3>
+                <h3>Herança e o Acesso Protegido</h3>
 
                 <p class="sub-topic-description">
                     O atributo 'mark' está protegido. O filho (Smartphone) consegue usar, mas o vizinho (Main) é barrado. 🛡️
@@ -169,94 +161,52 @@ public class Main {
                         <pre><code class="language-java">
 // CLASSE PAI
 public class Device {
-    protected String mark = "Generic";
+    protected String mark = "Genérica";
 }
 
 // CLASSE FILHA (Herança)
 public class Smartphone extends Device {
     public void showMark() {
         // Ele consegue acessar porque é "filho"! ✅
-        System.out.println("My mark is:" + mark);
+        System.out.println("Minha marca é: " + mark);
     }
 }
 
 // CLASSE EXTERNA (Vizinha)
 public class Main {
     public static void main(String[] args) {
-        Device device = new Device();
-
-        device.mark = "Apple" // ERRO! Se estiver em outro pacote, o Java barra. 🚫
+        Device d = new Device();
+        // d.mark = "Apple"; // ERRO! Se estiver em outro pacote, o Java barra. 🚫
     }
 }
                         </code></pre>
                     </div>
                 </div>
-
-                <blockquote class="sub-topic-blockquote">
-                    <h3>
-                        <strong>
-                            💡 Dica de Monitor (O resumo da segurança):
-                        </strong>
-                    </h3>
-
-                    <ul class="sub-topic-list">
-                        <li class="sub-topic-list-item">
-                            public: Mundo inteiro vê. 🌍
-                        </li>
-
-                        <li class="sub-topic-list-item">
-                            protected: Só a família e os vizinhos de pacote veem. 👥
-                        </li>
-
-                        <li class="sub-topic-list-item">
-                            default (sem nada): Só os vizinhos de pacote veem. 🏘️
-                        </li>
-
-                        <li class="sub-topic-list-item">
-                            private: Só eu vejo. 🤐
-                        </li>
-                    </ul>
-                </blockquote>
             </div>
         </section>
 
-        <section id="encapsulation-and-abstraction" class="sub-topic">
+        <section id="encapsulation" class="sub-topic">
             <div class="sub-topic-title">
                 <h2>Encapsulamento e Abstração 🛡️</h2>
             </div>
 
             <div class="sub-topic-content">
                 <p class="sub-topic-description">
-                    Encapsular é esconder os detalhes internos de como um objeto funciona e expor apenas o necessário. Em Java, fazemos isso transformando os atributos em private e criando métodos <strong>públicos</strong> para acessá-los.
+                    Encapsular é esconder os detalhes internos de como um objeto funciona e expor apenas o necessário. Em Java, fazemos isso transformando os atributos em private e criando métodos públicos para acessá-los.
                 </p>
 
-                <h3>
-                    <strong>
-                        Getters e Setters: As Portas de Vidro 🚪
-                    </strong>
-                </h3>
+                <h3>Getters e Setters: As Portas de Vidro 🚪</h3>
 
                 <ul class="sub-topic-list">
                     <li class="sub-topic-list-item">
-                        <strong>
-                            Getter (get):
-                        </strong>
-
-                        Um método que serve apenas para pegar (ler) o valor de um atributo privado.
+                        <strong>Getter (get):</strong> Um método que serve apenas para pegar (ler) o valor de um atributo privado.
                     </li>
-
                     <li class="sub-topic-list-item">
-                        <strong>
-                            Setter (set):
-                        </strong>
-
-                        Um método que serve para definir (alterar) o valor, permitindo que você coloque "filtros" ou validações.
+                        <strong>Setter (set):</strong> Um método que serve para definir (alterar) o valor, permitindo que você coloque "filtros" ou validações.
                     </li>
                 </ul>
 
-                <h3>
-                    Encapsulamento na Prática
-                </h3>
+                <h3>Encapsulamento na Prática</h3>
 
                 <p class="sub-topic-description">
                     Veja como o 'set' protege o sistema contra dados absurdos, como uma idade negativa. 🛑
@@ -281,13 +231,11 @@ public class Student {
 
     // Setter: permite mudar a idade com segurança
     public void setAge(int newAge) {
-        if (newAge > 0 && newAge <= 120) {
+        if (newAge > 0 && newAge < 120) {
             this.age = newAge;
-            System.out.println("Age Updated! ✅");
-        }
-
-        else {
-            System.out.println("Error: Invalid Age! 🚫");
+            System.out.println("Idade atualizada! ✅");
+        } else {
+            System.out.println("Erro: Idade inválida! 🚫");
         }
     }
 }
@@ -295,164 +243,20 @@ public class Student {
                     </div>
                 </div>
 
-                <h3>
-                    <strong>
-                        O Atalho da Produtividade: Gerando Getters e Setters ⚡
-                    </strong>
-                </h3>
+                <h3>Abstração (Escondendo a Complexidade) ☁️</h3>
 
                 <p class="sub-topic-description">
-                    Você não precisa digitar cada método manualmente. As IDEs modernas têm ferramentas de geração automática. Basta definir seus atributos private e usar os comandos:
-                </p>
-
-                <ul class="sub-topic-list">
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            No IntelliJ IDEA:
-                        </strong>
-
-                        Pressione Alt + Insert e selecione Getter and Setter. 🛠️
-                    </li>
-
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            No VS Code:
-                        </strong>
-
-                        Clique com o botão direito no código, vá em Source Action... e escolha Generate Getters and Setters. 🖱️
-                    </li>
-                </ul>
-
-                <h3>
-                    <strong>
-                        Construtores: O Nascimento do Objeto 👶
-                    </strong>
-                </h3>
-
-                <p class="sub-topic-description">
-                    O construtor é um método especial que tem o <strong>mesmo nome da classe</strong> e não possui tipo de retorno. Ele é executado automaticamente no momento em que você usa o new.
-                </p>
-
-                <h3>
-                    <strong>
-                        Construtor Vazio (Default) 🥛
-                    </strong>
-                </h3>
-
-                <p class="sub-topic-description">
-                    Se você não escrever nenhum construtor, o Java cria um "invisível" para você. Ele serve para criar o objeto com valores padrão (zero ou null).
-                </p>
-
-                <blockquote class="sub-topic-blockquote">
-                    <strong>
-                        Para que serve?
-                    </strong>
- 
-                    Quando você quer criar o objeto primeiro e só depois preencher os dados usando os setters.
-                </blockquote>
-
-                <h3>
-                    <strong>
-                        Construtor com Parâmetros 📝
-                    </strong>
-                </h3>
-
-                <p class="sub-topic-description">
-                    É usado quando você quer que o objeto já nasça "pronto". Você obriga quem está criando o objeto a passar as informações essenciais logo de cara.
-                </p>
-
-                <h3>
-                    Dando Vida ao Objeto com Construtores
-                </h3>
-
-                <p class="sub-topic-description">
-                    Veja como podemos ter as duas versões (Sobrecarga de Construtor) para dar liberdade ao usuário. 🏗️
-                </p>
-
-                <div class="console-code">
-                    <div class="console-dots">
-                        <span class="dot-red"></span>
-                        <span class="dot-yellow"></span>
-                        <span class="dot-green"></span>
-                    </div>
-
-                    <div class="console-content">
-                        <pre><code class="language-java">
-public class Gamer {
-    private String nickname;
-    private int level;
-
-    // 1. Construtor vazio
-    public Gamer() {}
-
-    // 2. construtor com Valores (Obrigatório)
-    public Gamer(String nickname, int level) {
-        this.nickname = nickname;
-        this.level = level;
-    }
-}
-
-// No Main:
-Gamer g1 = new Gamer(); // Nasce vazio ⚪
-Gamer g2 = new Gamer("CR7_Robozão", 99); // Nasce pronto! 🔥
-                        </code></pre>
-                    </div>
-                </div>
-
-                <h3>
-                    <strong>
-                        Abstração (Escondendo a Complexidade) ☁️
-                    </strong>
-                </h3>
-
-                <p class="sub-topic-description">
-                    A <strong>Abstração</strong> é um dos pilares mais importantes da POO. Ela consiste em focar apenas nos aspectos essenciais de um objeto para o seu sistema, escondendo os detalhes complexos ou irrelevantes para o usuário final.
+                    A Abstração é um dos pilares mais importantes da POO. Ela consiste em focar apenas nos aspectos essenciais de um objeto para o seu sistema, escondendo os detalhes complexos ou irrelevantes para o usuário final.
                 </p>
 
                 <blockquote class="sub-topic-blockquote">
                     Pense em um controle de videogame: para o jogador, o que importa é que ao apertar o botão "X", o personagem pula. O jogador não precisa entender como o sinal elétrico viaja pela placa ou como o código do jogo calcula a gravidade. <strong>Isso é abstração: entregar o controle, não o motor.</strong> 🕹️
                 </blockquote>
 
-                <h3>
-                    <strong>
-                        Por que abstrair? 🎯
-                    </strong>
-                </h3>
-
-                <ul class="sub-topic-list">
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            Simplicidade:
-                        </strong>
-
-                        O usuário interage com uma interface simples (métodos públicos).
-                    </li>
-
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            Segurança:
-                        </strong>
-
-                        Impede que o usuário mexa em partes sensíveis do código que podem quebrar o sistema.
-                    </li>
-                    
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            Manutenção:
-                        </strong>
-
-                        Você pode mudar toda a lógica interna sem que o usuário precise mudar a forma como usa o objeto.
-                    </li>
-                </ul>
-
-                <h3>
-                    <strong>
-                        💻 Implementando Abstração
-                    </strong>
-                </h3>
+                <h3>Abstraindo a Inicialização de um Jogo</h3>
 
                 <p class="sub-topic-description">
-                    No exemplo abaixo, o usuário só precisa chamar o método startGame(). O que acontece por baixo dos panos (carregamento de texturas, conexão com servidor) está "abstraído" e protegido por métodos privados.
+                    O "apelido" (objeto) interage apenas com o botão de início. Toda a "sujeira" do carregamento fica escondida. 🛡️
                 </p>
 
                 <div class="console-code">
@@ -472,7 +276,7 @@ public class GameSystem {
     }
 
     // O que o usuário vê (PÚBLICO) 🕹️
-    public void StartGame() {
+    public void startGame() {
         loadAssets();
         connectToServer();
         System.out.println("Starting " + gameName + "... Enjoy! 🚀");
@@ -490,27 +294,68 @@ public class GameSystem {
 
 // No Main:
 GameSystem myGame = new GameSystem("Java Quest");
-
 myGame.startGame();
-
-myGame.loadAssets(); // ERRO! Este método está abstraído (private). 🚫
+// myGame.loadAssets(); // ERRO! Este método está abstraído (private). 🚫
                         </code></pre>
                     </div>
                 </div>
 
-                <blockquote class="sub-topic-blockquote">
-                    <strong>
-                        💡 Dica de Monitor:
-                    </strong>
+                <h3>O Atalho da Produtividade: Gerando Getters e Setters ⚡</h3>
 
-                    "A abstração é o seu <strong>Contrato de Interface.</strong> Você promete que o método vai cumprir a tarefa, mas não precisa explicar o passo a passo técnico para quem está apenas usando o seu objeto." 🧠
-                </blockquote>
+                <p class="sub-topic-description">
+                    Você não precisa digitar cada método manualmente. As IDEs modernas têm ferramentas de geração automática. Basta definir seus atributos private e usar os comandos:
+                </p>
+
+                <ul class="sub-topic-list">
+                    <li class="sub-topic-list-item">
+                        <strong>No IntelliJ IDEA:</strong> Pressione Alt + Insert e selecione Getter and Setter. 🛠️
+                    </li>
+                    <li class="sub-topic-list-item">
+                        <strong>No VS Code:</strong> Clique com o botão direito no código, vá em Source Action... e escolha Generate Getters and Setters. 🖱️
+                    </li>
+                </ul>
+
+                <h3>Construtores: O Nascimento do Objeto 👶</h3>
+
+                <p class="sub-topic-description">
+                    O construtor é um bloco de código especial que tem o <strong>mesmo nome da classe</strong> e não possui tipo de retorno. Ele é executado automaticamente no momento em que você usa o new para criar a instância.
+                </p>
+
+                <div class="console-code">
+                    <div class="console-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+
+                    <div class="console-content">
+                        <pre><code class="language-java">
+public class Gamer {
+    private String nickname;
+    private int level;
+
+    // 1. Construtor vazio
+    public Gamer() {}
+
+    // 2. Construtor com Valores (Obrigatório)
+    public Gamer(String nickname, int level) {
+        this.nickname = nickname;
+        this.level = level;
+    }
+}
+
+// No Main:
+Gamer g1 = new Gamer(); // Nasce vazio ⚪
+Gamer g2 = new Gamer("CR7_Robozão", 99); // Nasce pronto! 🔥
+                        </code></pre>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="method-overloading" class="sub-topic">
             <div class="sub-topic-title">
-                <h2>Method Overloading (Sobrecarga) 🔄</h2>
+                <h2>Sobrecarga de Métodos 🔄</h2>
             </div>
 
             <div class="sub-topic-content">
@@ -522,46 +367,10 @@ myGame.loadAssets(); // ERRO! Este método está abstraído (private). 🚫
                     O Java é inteligente: no momento em que você chama o método, ele olha para o que você enviou e decide qual versão da "ferramenta" usar. 🎯
                 </blockquote>
 
-                <h3>
-                    <strong>
-                        Por que usar Overloading? 🧩
-                    </strong>
-                </h3>
-
-                <ul class="sub-topic-list">
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            Conveniência: 
-                        </strong>
-
-                        O usuário não precisa decorar nomes diferentes para ações parecidas (ex: sumInt, sumDouble). Ele só usa sum().
-                    </li>
-
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            Legibilidade:
-                        </strong>
-
-                        O código fica muito mais limpo e intuitivo.
-                    </li>
-
-                    <li class="sub-topic-list-item">
-                        <strong>
-                            Flexibilidade:
-                        </strong>
-
-                        Você permite que o seu objeto seja inicializado ou execute ações de várias formas.
-                    </li>
-                </ul>
-
-                <h3>
-                    <strong>
-                        💻 Versatilidade em Ação
-                    </strong>
-                </h3>
+                <h3>Versatilidade em Ação</h3>
 
                 <p class="sub-topic-description">
-                    Neste exemplo, vamos simular um sistema de <strong>Level Up.</strong> O jogador pode ganhar XP de forma fixa ou através de um bônus multiplicador.
+                    Repare como o nome do método é o mesmo, mas o Java escolhe o comportamento baseado nos argumentos que você passa. 🎮
                 </p>
 
                 <div class="console-code">
@@ -575,7 +384,7 @@ myGame.loadAssets(); // ERRO! Este método está abstraído (private). 🚫
                         <pre><code class="language-java">
 public class Character {
     private String name;
-    pritvate int xp = 0;
+    private int xp = 0; // Corrigido de pritvate para private ✅
 
     public Character(String name) {
         this.name = name;
@@ -600,7 +409,7 @@ public class Character {
 Character hero = new Character("Carlos");
 
 hero.levelUp(100); // Chama Versão 1 ✅
-hero.levelUp(100, 1.5) // Chama Versão 2 ✅
+hero.levelUp(100, 1.5); // Corrigido: adicionado o ponto e vírgula final ✅
                         </code></pre>
                     </div>
                 </div>
@@ -610,9 +419,28 @@ hero.levelUp(100, 1.5) // Chama Versão 2 ✅
                         💡 Dica de Monitor:
                     </strong>
 
-                    "A sobrecarga não depende do tipo de retorno (void, int, etc), mas apenas dos <strong>parâmetros.</strong> Se você criar dois métodos com o mesmo nome e os mesmos parâmetros, o Java vai reclamar, mesmo que um retorne int e o outro double! ⚠️"
+                    "A sobrecarga não depende do tipo de retorno (void, int, etc), mas apenas dos <strong>parâmetros.</strong> Se você criar dois métodos com o mesmo nome e os mesmos parâmetros, o Java vai reclamar, mesmo que um retorne int e o outro double!" ⚠️
                 </blockquote>
             </div>
         </section>
+
+        <div class="more-content">
+            <div class="notebook-body">
+                <div class="notebook-face">
+                    <div class="notebook-face-decoration">
+                        <img src="{{url_for('static', filename='img/gojira4.jpg')}}" alt="Gojira Illustration">
+                    </div>
+
+                    <div class="notebook-content">
+                        <span>
+                            Para conteúdos mais avançados, consulte a:
+                            <a href="https://docs.oracle.com/en/java/javase/" target="_blank" rel="noopener noreferrer">
+                                Documentação Oficial do Java
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 {% endblock %}
