@@ -260,6 +260,7 @@
   padding: clamp(1rem, 2vw, 3rem);
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
 }
 .material-wrapper .main-topic .main-topic-title h1 {
   color: #fff;
@@ -268,7 +269,6 @@
   letter-spacing: -0.05em;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
-  color: #fff;
   transition: all 300ms ease-in-out;
 }
 .material-wrapper .main-topic .main-topic-title h1:hover {
@@ -283,6 +283,7 @@
 .material-wrapper .main-topic .main-topic-content {
   max-width: 800px;
   margin: 0 auto;
+  width: 100%;
   padding: clamp(1rem, 2vw, 3rem);
   display: flex;
   flex-direction: column;
@@ -299,6 +300,10 @@
   line-height: 1.8;
   font-weight: 200;
   color: #fff;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 @media screen and (min-width: 2560px) {
   .material-wrapper .main-topic .main-topic-content .main-topic-description {
@@ -330,6 +335,7 @@
   color: #fff;
   border-left: 2px solid rgba(255, 255, 255, 0.25);
   transition: all 300ms ease-in-out;
+  text-align: justify;
 }
 .material-wrapper .main-topic .main-topic-content .main-topic-list .main-topic-list-item:hover {
   border-color: rgba(255, 255, 255, 0.75);
@@ -351,6 +357,7 @@
   line-height: 1.8;
   font-weight: 300;
   color: #fff;
+  text-align: justify;
   transition: all 300ms ease-in-out;
 }
 .material-wrapper .main-topic .main-topic-content .main-topic-blockquote:hover {
@@ -365,7 +372,7 @@
 .material-wrapper .main-topic .sub-topic {
   position: relative;
   height: auto;
-  width: auto;
+  width: 100%;
   padding: clamp(1.5rem, 2vw, 3rem) clamp(2rem, 3vw, 4rem);
   border-radius: 2rem;
   margin-top: 2rem;
@@ -395,13 +402,9 @@
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
   transform: translateY(-5px);
 }
-@media screen and (max-width: 480px) {
-  .material-wrapper .main-topic .sub-topic {
-    width: 75vw;
-  }
-}
 .material-wrapper .main-topic .sub-topic .sub-topic-title {
   max-width: 800px;
+  width: 100%;
 }
 @media screen and (min-width: 2560px) {
   .material-wrapper .main-topic .sub-topic .sub-topic-title {
@@ -415,7 +418,6 @@
   letter-spacing: -0.05em;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
-  color: #fff;
 }
 @media screen and (min-width: 2560px) {
   .material-wrapper .main-topic .sub-topic .sub-topic-title h2 {
@@ -424,8 +426,10 @@
 }
 .material-wrapper .main-topic .sub-topic .sub-topic-content {
   max-width: 800px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  word-wrap: break-word;
   gap: 3rem;
 }
 @media screen and (min-width: 2560px) {
@@ -438,6 +442,10 @@
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   line-height: 1.65;
   font-weight: 350;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
   color: #fff;
 }
 @media screen and (min-width: 2560px) {
@@ -473,6 +481,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: justify;
 }
 .material-wrapper .main-topic .sub-topic .sub-topic-content .sub-topic-list .sub-topic-list-item:hover {
   border-color: rgba(255, 255, 255, 0.75);
@@ -487,6 +496,7 @@
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 500;
   color: #fff;
+  text-align: left;
 }
 .material-wrapper .main-topic .sub-topic .sub-topic-content .sub-topic-blockquote {
   border: 3px solid rgba(255, 255, 255, 0.45);
@@ -496,6 +506,7 @@
   line-height: 1.8;
   font-weight: 300;
   color: #fff;
+  text-align: justify;
   transition: all 300ms ease-in-out;
 }
 .material-wrapper .main-topic .sub-topic .sub-topic-content .sub-topic-blockquote:hover {
@@ -561,6 +572,9 @@
 .material-wrapper .main-topic .sub-topic .sub-topic-content .timeline .timeline-item p {
   color: rgba(255, 255, 255, 0.7);
   font-size: clamp(1rem, 1.5vw, 1.5rem);
+  text-align: justify;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
 .material-wrapper .main-topic .more-content {
   height: 80vh;
