@@ -1062,3 +1062,27 @@ public class Main {
     </div>
   </main>
 {% endblock %}
+
+{% block previous_link %}
+<a href="{{ url_for('material_page.introduction') }}" class="link-style">
+  <span class="label">
+      Nível Anterior
+  </span>
+
+  <span class="title">
+     <span class="arrow">←</span> Introdução ao Java
+  </span>
+</a>
+{% endblock %}
+
+{% block next_link %}
+<a href="{{ url_for('material_page.method_and_access') }}" class="link-style">
+  <span class="label">
+    Próximo Nível
+  </span>
+
+  <span class="title">
+     Métodos e Acessos <span class="arrow">→</span>
+  </span>
+</a>
+{% endblock %}

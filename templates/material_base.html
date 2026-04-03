@@ -65,7 +65,7 @@
               </li>
 
               <li class="sub-li">
-                <a href="{{ url_for('material_page.basic_syntax', _anchor='conditionals-and-loops') }}" class="sub-link">2.4 - Controle de Fluxo: Condicionais e Loops 🔄</a>
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='conditionals-and-loops') }}" class="sub-link">2.4 - Condicionais e Loops 🔄</a>
               </li>
 
               <li class="sub-li">
@@ -145,7 +145,45 @@
 {% block footer %}
 <footer class="footer-material">
   <div class="footer-material-wrapper">
-    {% block footer_content %}{% endblock %}
+    <div class="content-one">
+      {% block previous_link %}{% endblock %}
+    </div>
+
+    <div class="content-two content-style">
+      <a href="https://docs.oracle.com/en/java/javase/" class="link-style" target="_blank" rel="noopener noreferrer">
+        <span class="symbol">
+          ⚙
+        </span>
+
+        <span class="label">
+          Recurso
+        </span>
+
+        <span class="title">
+          Documentação
+        </span>
+      </a>
+      </div>
+
+    <div class="content-three content-style">
+      <a href="#" class="link-style locked">
+        <span class="symbol">
+          ◈
+        </span>
+
+        <span class="label">
+          Treinamento
+        </span>
+
+        <span class="title">
+          Em Produção...
+        </span>
+      </a>
+      </div>
+
+    <div class="content-four">
+      {% block next_link %}{% endblock %}
+    </div>
   </div>
 
   <div class="footer-material-credits">

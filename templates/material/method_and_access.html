@@ -444,3 +444,27 @@ hero.levelUp(100, 1.5); // Corrigido: adicionado o ponto e vírgula final ✅
         </div>
     </main>
 {% endblock %}
+
+{% block previous_link %}
+<a href="{{ url_for('material_page.basic_syntax') }}" class="link-style">
+  <span class="label">
+      Nível Anterior
+  </span>
+
+  <span class="title">
+     <span class="arrow">←</span> Sintaxe Básica
+  </span>
+</a>
+{% endblock %}
+
+{% block next_link %}
+<a href="{{ url_for('material_page.class_hierarchy') }}" class="link-style">
+  <span class="label">
+    Próximo Nível
+  </span>
+
+  <span class="title">
+     Hierarquia de Classes <span class="arrow">→</span>
+  </span>
+</a>
+{% endblock %}

@@ -361,22 +361,26 @@ public void teste() {
   </main>
 {% endblock %}
 
-{% block footer_content %}
-<div class="content-one content-style">
-  <p>Recurso</p>
+{% block previous_link %}
+<a href="#" class="link-style locked">
+  <span class="label">
+      Nível Anterior
+  </span>
 
-  <a href="">Documentação</a>
-</div>
+  <span class="title">
+     <span class="arrow">←</span> 🚫 Não Tem
+  </span>
+</a>
+{% endblock %}
 
-<div class="content-two content-style">
-  <p>Treinamento</p>
+{% block next_link %}
+<a href="{{ url_for('material_page.basic_syntax') }}" class="link-style">
+  <span class="label">
+    Próximo Nível
+  </span>
 
-  <a href="#">Em Produção...</a>
-</div>
-
-<div class="content-three content-style">
-  <p>Próximo Tópico</p>
-
-  <a href="#">Sintaxe Básica -></a>
-</div>
+  <span class="title">
+     Sintaxe Básica <span class="arrow">→</span>
+  </span>
+</a>
 {% endblock %}
