@@ -142,6 +142,19 @@
   </div>
 {% endblock %}
 
+{% block footer %}
+<footer class="footer-material">
+  <div class="footer-material-wrapper">
+    {% block footer_content %}{% endblock %}
+  </div>
+
+  <div class="footer-material-credits">
+    <h3>Designed & Engineered by <span>Carlos Alberto da Silva Neto</span></h3>
+    <p>Java Fellow Project 2026</p>
+  </div>
+</footer>
+{% endblock %}
+
 {% block scripts %}
     <script src="{{ url_for('static', filename='js/material.js') }}"></script>
 {% endblock %}

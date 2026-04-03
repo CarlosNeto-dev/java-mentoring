@@ -176,6 +176,43 @@
 </main>
 {% endblock %}
 
+{% block footer %}
+<footer class="footer-home">
+  <div class="footer-wrapper">
+    <div class="footer-navbar">
+      <ul class="footer-ul">
+        <li class="footer-li">
+          <a href="https://docs.oracle.com/en/java/">Documentação Oficial</a>
+        </li>
+
+        <li class="footer-li">
+          <a href="#">Monitoria</a>
+        </li>
+
+        <li class="footer-li">
+          <a href="#">Instalação Do Ambiente</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-credits">
+      <h3>Designed & Engineered by <span>Carlos Alberto da Silva Neto</span></h3>
+      <p>Java Fellow Project 2026</p>
+    </div>
+  </div>
+
+  <div class="footer-educational-institution">
+    <p>UNIESP • CENTRO UNIVERSITÁRIO</p>
+
+    <div class="social-circle">
+      <a href="#" title="GitHub">GH</a>
+      <a href="#" title="LinkedIn">LI</a>
+      <a href="#" title="Instagram">IG</a>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
 {% block scripts %}
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 {% endblock %}
