@@ -1,5 +1,4 @@
 .footer-home {
-  margin-top: 2.75rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -7,6 +6,8 @@
   flex-direction: column;
   padding: clamp(1.25rem, 2.5vw, 3rem) 0;
   gap: clamp(1rem, 1.5vw, 2rem);
+  background-color: #0a0a0a;
+  background-image: radial-gradient(at 0% 50%, rgba(255, 255, 255, 0.02) 0px, transparent 50%), radial-gradient(at 100% 50%, rgba(255, 255, 255, 0.02) 0px, transparent 50%);
 }
 .footer-home .footer-wrapper {
   width: 100%;
