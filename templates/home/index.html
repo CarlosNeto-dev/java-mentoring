@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block header %}
+<header class="header-home">
+  <div class="wrapper-header">
+    <div class="logo">
+      <i class="fa-brands fa-java"></i>
+    </div>
+
+    <div class="navbar-desktop">
+      <nav>
+        <ul>
+          <li>
+            <a href="#hero-page">Início</a>
+          </li>
+
+          <li>
+            <a href="#dynamic-page">Dinâmica</a>
+          </li>
+
+          <li>
+            <a href="#material-page">Material</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="mobile-menu-button">
+      <i class="fa-solid fa-bars icon-two"></i>
+    </button>
+  </div>
+    <div class="navbar-mobile">
+      <nav>
+        <ul>
+          <li>
+            <a href="#hero-page">Início🏡</a>
+          </li>
+
+          <li>
+            <a href="#dynamic-page">Dinâmica⚙️</a>
+          </li>
+
+          <li>
+            <a href="#material-page">Material🗂️</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<main class="main-home">
+  <section class="hero-section" id="hero-page">
+    <div class="welcome-div">
+      <div class="div-title">
+        <img src="{{ url_for('static', filename='img/waving-hands.png') }}" alt="wave-hand">
+
+        <h1>Olá, Entusiastas de Java.</h1>
+      </div>
+
+      <div class="div-content">
+        <p>Aqui é o lugar ideal para tirar dúvidas e aprender mais sobre Java!</p>
+      </div>
+    </div>
+
+    <div class="div-get-started">
+      <div class="book-format">
+        <img src="{{ url_for('static', filename='img/icon-java.gif') }}" alt="java-animated-gif">
+      </div>
+
+      <h2>Aprenda Java</h2>
+
+      <p>"Não sou gênio, porém com disciplina e dedicação posso me tornar um!"</p>
+
+      <div class="chapter-one">
+        <h3>Capítulo 1 - Introdução Ao Java ☕︎</h3>
+      </div>
+
+      <a href="{{ url_for('material_page.introduction') }}">
+        <button>
+          Comece Aprender
+
+          <i class="fa-solid fa-arrow-right icon-one"></i>
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <section class="dynamic-section" id="dynamic-page">
+    <div class="dynamic-title">
+      <h3>Como Funciona?</h3>
+
+      <img src="{{ url_for('static', filename='img/thinking.gif') }}" alt="thinking-emoji">
+    </div>
+
+    <div class="dynamic-content">
+      <div class="demonstration-1 book-style">
+        <div class="paper-style"></div>
+      </div>
+
+      <div class="text-content1 text-style">
+        <h4>Selecione Um Tópico Em Destaque</h4>
+      </div>
+
+      <div class="demonstration-2 demonstration-style">
+        <img src="{{ url_for('static', filename='img/coding.gif') }}" alt="coding-gif">
+      </div>
+
+      <div class="text-content2 text-style">
+        <h3>Abra Sua IDE Favorita E Comece A Codar</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="material-section" id="material-page">
+    <div class="topics-div">
+      <a href="{{ url_for('material_page.introduction') }}">
+        <div class="book-topic-format1 book-style">
+          <h4>Introdução ao Java</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              Cap 1 - Desenvolve-se a Paixão Pelo Java
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a href="{{ url_for('material_page.basic_syntax') }}">
+        <div class="book-topic-format2 book-style">
+          <h4>Sintaxe Básica</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              Capítulo 2 - Desenvolve-se a Noção Básica da Sintaxe
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a href="{{ url_for('material_page.method_and_access') }}">
+        <div class="book-topic-format3 book-style">
+          <h4>Métodos e Acessos</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              Capítulo 3 - Desenvolve-se a Noção de Segurança de Dados
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a href="{{ url_for('material_page.class_hierarchy') }}">
+        <div class="book-topic-format4 book-style">
+          <h4>Hierarquia de Classes</h4>
+
+          <div class="book-paper paper-style">
+            <p>
+              Capítulo 4 - Desenvolve-se a Noção da Hierarquia de Classes
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="more-content">
+      <h6>Para mais conteúdos</h6>
+      <a href="{{ url_for('material_page.introduction') }}">
+        <button>Acesse Aqui</button>
+      </a>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block footer %}
+<footer class="footer-home">
+  <div class="footer-wrapper">
+    <div class="footer-navbar">
+      <ul class="footer-ul">
+        <li class="footer-li">
+          <a href="https://docs.oracle.com/en/java/" target="_blank" rel="noopener noreferrer">Documentação Oficial</a>
+        </li>
+
+        <li class="footer-li">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="locked">Monitoria</a>
+        </li>
+
+        <li class="footer-li">
+          <a href="https://www.jetbrains.com/idea/download/?section=windows" target="_blank" rel="noopener noreferrer">Instalação Do Ambiente</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-credits">
+      <h3>Designed & Engineered by <span>Carlos Alberto da Silva Neto</span></h3>
+      <p>Java Fellow Project 2026</p>
+    </div>
+  </div>
+
+  <div class="footer-educational-institution">
+    <p>UNIESP • CENTRO UNIVERSITÁRIO</p>
+
+    <div class="social-circle">
+      <a href="https://github.com/CarlosNeto-dev" title="GitHub">GH</a>
+      <a href="https://www.linkedin.com/in/carlos-neto-54b62339b/" title="LinkedIn">LI</a>
+      <a href="https://www.instagram.com/carlos_alberto_profissional/?hl=pt-br" title="Instagram">IG</a>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

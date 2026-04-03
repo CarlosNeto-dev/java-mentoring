@@ -1,0 +1,1088 @@
+{% extends "material_base.html" %}
+
+{% block title %} Sintaxe Básica {% endblock %}
+
+{% block material_content %}
+  <main id="basic_syntax" class="main-topic">
+    <div class="main-topic-title">
+      <h1>Sintaxe Básica do <span class="span-decoration"> Java 🏗️</span></h1>
+    </div>
+
+    <div class="main-topic-content">
+      <p class="main-topic-description">
+        Neste capítulo, saímos da teoria de instalação e mergulhamos na <strong>Sintaxe Básica</strong>, o verdadeiro "DNA" que sustenta qualquer aplicação Java robusta. Dominar esses conceitos é o que separa um código amador de um sistema de nível <strong>Fellow.</strong>
+      </p>
+
+      <h3>
+        Vamos dividir essa jornada nos seguintes pilares fundamentais 🧬:
+      </h3>
+
+      <ul class="main-topic-list">
+        <li class="main-topic-list-item">
+          <strong>📦 2.1 Variáveis e Tipos de Dados: Entenda como o Java gerencia a memória do computador. Você vai aprender a diferença entre tipos primitivos (como int e double) e objetos (como String), garantindo que seu código seja eficiente e não desperdice recursos.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>⚙️ 2.2 Operadores: O motor da lógica computacional. Vamos explorar desde cálculos matemáticos precisos até expressões lógicas complexas (&&, ||, !) que permitem ao seu software realizar comparações e tomar decisões rápidas.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>⌨️ 2.3 Entrada de Dados (Scanner): Aprenda a interagir com o usuário, capturando textos e números digitados no teclado para dar interatividade ao seu software.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🛣️ 2.4 Controle de Fluxo e Loops: Aqui é onde o seu programa ganha "vida" e escala. Vamos dominar as estruturas de decisão (if/else) e automatizar tarefas repetitivas com for, while e do-while.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🏗️ 2.5 Métodos: O primeiro passo para o Código Limpo. Aprenda a organizar blocos de lógica reutilizáveis, evitando repetição de código (Princípio DRY - Don't Repeat Yourself).</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🛡️ 2.6 Tratamento de Erros: O seguro de vida do seu código. Como prever falhas e usar o try-catch para impedir que o sistema "quebre" na mão do usuário.</strong>
+        </li>
+
+        <li class="main-topic-list-item">
+          <strong>🧬 2.7 Programação Orientada a Objetos (POO): Saímos das linhas de código isoladas e passamos a pensar em objetos reais.</strong>
+        </li>
+      </ul>
+
+      <blockquote class="main-topic-blockquote">
+        <strong>💡 Insight do Carlos:</strong><br><br>
+        "Olha, eu sei que no começo a sintaxe do Java pode parecer um pouco rígida, cheia de regras, pontos e vírgulas. Pode até bater aquele desânimo quando o compilador reclama de uma chave esquecida. 😅 Mas escuta o que eu te digo: cada erro que você resolve hoje é um neurônio a mais na sua rede de conhecimento. 🧠<br><br>
+        Na jornada para ser um especialista em IA, essa base é o seu alicerce. Por mais difícil que a curva de aprendizado pareça agora, dominar essa fundação vai te dar a liberdade de construir sistemas incríveis no futuro. Mantenha a disciplina, melhore 1% a cada dia e não desista. O esforço vai valer muito a pena! 🦖🚀"
+      </blockquote>
+    </div>
+
+    <section id="variables-and-data-types" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Variáveis e Tipos de Dados 📦</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          No Java, uma variável é um espaço na memória do computador onde guardamos informações. Imagine como uma caixa com uma etiqueta: a etiqueta é o nome da variável, e o <strong>formato da caixa</strong> é o tipo de dado.
+        </p>
+
+        <h3>
+          <strong>
+            🏗️ Como declarar uma variável?
+          </strong>
+        </h3>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+int idade = 18; // Declarando um número inteiro
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>
+          <strong>
+            🧪 Os Tipos Primitivos (Os Essenciais):
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Existem tipos básicos que você vai usar 99% do tempo:
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            Inteiro 🔢:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    int number1 = 20;
+    int number2 = 10;
+
+    int result = number1 + number2;
+
+    System.out.println(result); // Saída: 30
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+
+          <li class="sub-topic-list-item">
+            Flutuante 🔢:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    double number1 = 2.5;
+    double number2 = 2.5;
+
+    double result = number1 + number2;
+
+    System.out.println(result); // Saída: 5.0
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+
+          <li class="sub-topic-list-item">
+            Booleano 🔀:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    boolean isTrue = true;
+    boolean isFalse = false;
+
+    System.out.println(isTrue); // Saída: true
+    System.out.println(isFalse); // Saída: false
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+
+          <li class="sub-topic-list-item">
+            char 📝:
+
+            <div class="console-code">
+              <div class="console-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+
+              <div class="console-content">
+                <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    char letter = 'A';
+
+    System.out.println(letter); // Saída: A
+  }
+}
+                </code></pre>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <blockquote class="sub-topic-blockquote">
+          <strong>
+            ⚠️ Atenção:
+          </strong>
+          Existe também o tipo <strong>String</strong>, que usamos para textos (como seu nome "Carlos", "Maria" etc...). No Java, String <strong>não é um tipo primitivo</strong>, mas sim uma Classe, por isso sempre começa com <strong>S</strong> maiúsculo! ⚠️
+        </blockquote>
+
+        <h3>
+          <strong>
+            📏 Regras de Ouro para Nomes de Variáveis
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Para manter o seu código no padrão Clean Code:
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>CamelCase🐫:</strong>
+            Comece com letra minúscula e cada palavra seguinte com maiúscula (ex: minhaVariavel, valorBolsaEstagio).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Seja descritivo📔:</strong>
+            Nada de criar variáveis chamadas a, b ou x. Use nomes que expliquem o que o dado é (ex: salarioMensal).
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="arithmetic-and-logical" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Operadores Aritméticos e Lógicos ➕➖</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          Os operadores aritméticos são usados para realizar operações matemáticas simples. O Java segue a regra de precedência (PEMDAS), ou seja, multiplica e divide antes de somar e subtrair.
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>Divisão Inteira(/):</strong>
+            Se você usar números inteiros, o Java vai descartar o que vem depois da vírgula. 🪓
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Módulo(%):</strong>
+            Ele não te dá o resultado da divisão, mas sim o resto que sobrou dela. É perfeito para verificar se um número é par ou ímpar! ⚖️
+          </li>
+        </ul>
+
+        <h3>Matemática na Prática:</h3>
+
+        <p class="sub-topic-description">Veja como o Java se comporta com números inteiros e como o resto da divisão funciona. 🧮</p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    int number1 = 10;
+    int number2 = 3;
+
+    int division = number1 / number2;
+    int restOfDivision = number1 % number2;
+
+    System.out.println(division); // Saída: 3
+    System.out.println(restOfDivision); // Saída: 1
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>Operadores de Comparação (Relacionais) ⚖️</h3>
+
+        <p class="sub-topic-description">Esses operadores servem para comparar dois valores. O resultado de qualquer comparação no Java será sempre um valor booleano: true ou false.</p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            == : Verifica se os valores são iguais (não confunda com =, que serve para dar valor).
+          </li>
+
+          <li class="sub-topic-list-item">
+            != : Verifica se são diferentes.
+          </li>
+
+          <li class="sub-topic-list-item">
+            > e < : Maior e Menor. 📈
+          </li>
+        </ul>
+
+        <h3>
+          Comparando Valores
+        </h3>
+
+        <p class="sub-topic-description">
+          As comparações são a base para que o seu programa tome decisões no futuro. 🚦
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    int minAge = 18;
+    int userAge = 20;
+
+    boolean canDrive = userAge >= minAge;
+    boolean isDiferent = (10 != 5);
+
+    System.out.println(canDrive); // Saída: true
+    System.out.println(isDiferent); // Saída: true
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>Operadores Lógicos 🧠</h3>
+
+        <p class="sub-topic-description">
+          Eles permitem combinar várias comparações em uma única expressão. São fundamentais para criar regras complexas.
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            && (E / AND): Retorna true apenas se <strong>ambas</strong> as condições forem verdadeiras. ✅ + ✅
+          </li>
+
+          <li class="sub-topic-list-item">
+            || (OU / OR): Retorna true se <strong>pelo menos uma</strong> das condições for verdadeira. ✅ + ❌
+          </li>
+
+          <li class="sub-topic-list-item">
+            ! (NÃO / NOT): Ele inverte o valor. Se algo é true, vira false. 🔄
+          </li>
+        </ul>
+
+        <h3>Lógica de Acesso</h3>
+
+        <p class="sub-topic-description">
+          Usando lógica para verificar se alguém pode entrar em um evento VIP. 🎫
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    boolean haveInvite = true;
+    boolean isOnList = false;
+
+    boolean canEnter = haveInvite || isOnList;
+    boolean vipAcess = haveInvite && isOnList;
+
+    System.out.println(canEnter); // Saída: true
+    System.out.println(vipAcess); // Saída: false
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scanner-input" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Entrada de Dados com Scanner ⌨️</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          Até agora, nossos programas usaram valores fixos no código. Mas e se você quiser que o usuário digite algo? Para isso, o Java usa a classe <strong>Scanner</strong>. Ela funciona como um "leitor" que captura tudo o que é digitado no console.
+        </p>
+
+        <h3>
+          <strong>
+            Passo a Passo para Ler Dados
+          </strong>
+        </h3>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>1. Importar 📦:</strong>
+            O Scanner não vem ativado por padrão. Precisamos "puxar" ele da biblioteca do Java adicionando <code>import java.util.Scanner;</code> na primeira linha do seu arquivo.
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>2. Instanciar 🛠️:</strong>
+            É necessário ligar o leitor do teclado criando o objeto Scanner (vamos ver mais sobre objetos na seção de POO).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>3. Ler 📖:</strong>
+            Usar comandos específicos como: <code>nextLine():</code> Para ler textos inteiros(linhas completas) <code>nextInt():</code> Para ler números inteiros. <code>nextDouble():</code> Para ler números com vírgula/ponto (decimais). <code>next:</code> Para ler uma única palavra.
+          </li>
+        </ul>
+
+        <h3>Conversando com o Usuário</h3>
+
+        <p class="sub-topic-description">
+          Um programa interativo que pergunta o seu nome e a sua idade, e depois responde! 🗣️
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+import java.util.Scanner; // 1. Importação obrigatória!
+
+public class Main {
+  public static void main(String[] args) {
+    // 2. Ligando o leitor do teclado
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Qual é o seu nome? ");
+    String name = scanner.nextLine(); // 3. Lê um texto
+
+    System.out.print("Quantos anos você tem? ");
+    int age = scanner.nextInt(); // Lê um número
+
+    System.out.println("Olá " + name + ", você tem " + age + " anos!");
+
+    // 4. Sempre feche o scanner no final para liberar memória!
+    scanner.close();
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <blockquote class="sub-topic-blockquote">
+          <strong>⚠️ A Pegadinha do Scanner (Bug do Enter):</strong><br><br>
+          Se você usar <code>nextInt()</code> para ler um número e logo depois tentar usar <code>nextLine()</code> para ler um texto, o programa vai "pular" a leitura do texto. Isso acontece porque o <code>nextInt()</code> não consome o "Enter" que você apertou. A solução? Coloque um <code>scanner.nextLine();</code> vazio logo após ler o número, só para "limpar o lixo" deixado pelo Enter! 🐛🔨
+        </blockquote>
+      </div>
+    </section>
+    <section id="conditionals-and-loops" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Controle de Fluxo: Condicionais e Loops🚥</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <p class="sub-topic-description">
+          O if (se) é a estrutura de decisão mais básica. Ele avalia uma condição booleana: se for true, o código dentro das chaves executa. Se não, o Java pula para o else (senão).
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            if: A porta de entrada. Se a condição for real, ele entra.
+          </li>
+
+          <li class="sub-topic-list-item">
+            else if: Uma segunda chance. Se o primeiro if falhar, ele testa essa nova condição.
+          </li>
+
+          <li class="sub-topic-list-item">
+            else: O "porto seguro". Se nenhuma das condições acima funcionar, ele executa o que estiver aqui.
+          </li>
+        </ul>
+
+        <h3>Tomando Decisões:</h3>
+
+        <p class="sub-topic-description">
+          Um sistema simples para verificar se um aluno foi aprovado, está de recuperação ou reprovado. 📝
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    double grade = 6.5;
+
+    if (grade >= 7) {
+      System.out.println("Aprovado! 🎉");
+    }
+
+    else if (grade >= 5) {
+      System.out.println("Recuperação! 📚");
+    }
+
+    else {
+      System.out.println("Reprovado! ❌");
+    }
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>O Laço for (Repetição Controlada) 🔄</h3>
+
+        <p class="sub-topic-description">
+          O for é usado quando você sabe exatamente quantas vezes quer repetir uma ação. Ele é composto por três partes: <strong>inicialização, condição e incremento</strong>.
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>Início:</strong>
+            int i = 0 (Começamos do zero).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Condição:</strong>
+            i < 5 (Enquanto i for menor que 5, continue rodando).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Incremento:</strong>
+            i++ (A cada volta, some +1 no valor de i)
+          </li>
+        </ul>
+
+        <h3>Contagem Inteligente</h3>
+
+        <p class="sub-topic-description">
+          Usando o laço para repetir uma mensagem ou percorrer uma sequência de números. 🚀
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    // Vai imprimir de 0 a 5
+
+    for (int i = 0; i <= 5; i++) {
+      System.out.println("Count:" + i);
+    }
+
+    System.out.println("Done!");
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>O Laço while (Repetição por Condição) 🔁</h3>
+
+        <p class="sub-topic-description">
+          Diferente do for, o while (enquanto) é usado quando <strong>você não sabe</strong> quantas vezes a repetição vai acontecer. Ele depende exclusivamente de uma condição ser verdadeira para continuar rodando.
+        </p>
+
+        <blockquote class="sub-topic-blockquote">
+          <strong>⚠️ Cuidado:</strong> Se a condição nunca se tornar falsa, você cria um "loop infinito" e o programa trava!
+        </blockquote>
+
+        <h3>
+          Enquanto for Verdade...
+        </h3>
+
+        <p class="sub-topic-description">
+          Simulando o carregamento de uma bateria até que ela chegue a 100%. 🔋
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    int battery = 95;
+
+    while (battery < 100) {
+      System.out.println("Battery: " + battery + "%");
+      battery++;
+    }
+
+    System.out.println("Charge Complete! 🔋✅");
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>
+          <strong>
+            O Laço do-while 🔁❓
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Diferente do while comum, que testa a condição no início, o do-while testa no final. É perfeito para situações onde você precisa que uma ação ocorra obrigatoriamente antes de qualquer validação (como exibir um menu pelo menos uma vez).
+        </p>
+
+        <blockquote class="sub-topic-blockquote">
+          <strong>⚠️ O Perigo:</strong> Se você não tomar cuidado, ele executa algo que não deveria ter sido executado caso a condição já fosse inválida.
+        </blockquote>
+
+        <h3>
+          Garantindo a Primeira Execução
+        </h3>
+
+        <p class="sub-topic-description">
+          Veja como o código roda uma vez, mesmo que a bateria já esteja "estourada" acima de 100%. 🔋
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    int battery = 120; // Já passou do limite!
+
+    do {
+      System.out.println("Battery: " + battery + "%");
+      battery++;
+    }
+
+    while (battery < 100);
+
+    // No 'while' comum, nada seria impresso.
+    // No 'do-while', ele imprime "Battery: 120%" e depois para.
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="methods-and-functions" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Métodos e Funções</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <h3>
+          <strong>
+            O que é um Método? 🛠️
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">Pense em um método como uma <strong>ferramenta</strong> ou uma <strong>receita.</strong> Em vez de escrever a mesma lógica dez vezes, você cria um método uma única vez e o "chama" sempre que precisar.</p>
+
+        <h3>Um método básico em Java tem:</h3>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>Tipo de Retorno:</strong>
+            O que ele devolve (ex: int, String, ou void se não devolver nada).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Nome:</strong>
+            O que ele faz (ex: somar, imprimirNome).
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Parâmetros:</strong>
+            O que ele precisa para funcionar (fica dentro dos parênteses).
+          </li>
+        </ul>
+
+        <h3>
+          Criando sua primeira Ferramenta
+        </h3>
+
+        <p class="sub-topic-description">
+          Neste exemplo, criamos um método que recebe um nome e imprime uma saudação personalizada. ✋
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  // Criando o método (A Receita)
+  public static void greet(String name) {
+    System.out.println("Hello, " + name + "!");
+  }
+
+  // Chamando o método (Usando a ferramenta)
+  public static void main(String[] args) {
+    greet("Carlos");
+    greet("Maria");
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>
+          <strong>
+            Métodos com Retorno (return) 🔄
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Às vezes, você não quer apenas que o método imprima algo, mas que ele <strong>calcule e te devolva</strong> um valor para você usar depois. Para isso, usamos a palavra-chave return.
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            Se o método devolve um número inteiro, o tipo deve ser int.
+          </li>
+
+          <li class="sub-topic-list-item">
+            Se ele não devolve nada, usamos void.
+          </li>
+        </ul>
+
+        <h3>Métodos que Calculam</h3>
+
+        <p class="sub-topic-description">
+          Aqui o método faz uma conta e "entrega" o resultado para uma variável fora dele. 🧮
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static int sum(int n1, int n2) {
+    return n1 + n2;
+  }
+
+  public static void main(String[] args) {
+    int result = sum(10, 2);
+    System.out.println(result); // Saída: 12
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="error-and-exceptions" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Tratamento de Erros e Exceções</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <h3>O que são Exceções? ⚠️</h3>
+
+        <p class="sub-topic-description">
+          No Java, um erro que acontece enquanto o programa está rodando é chamado de <strong>Exceção.</strong> Imagine que você tenta dividir um número por zero ou ler um arquivo que não existe: o Java entra em pânico e para tudo.
+        </p>
+
+        <blockquote class="sub-topic-blockquote">
+          O try-catch é como um "seguro" para o seu código: você <strong>tenta</strong> fazer algo e, se der erro, você <strong>captura</strong> o problema e decide o que fazer em vez de deixar o programa fechar.
+        </blockquote>
+
+        <h3>Evitando o Crash do Sistema</h3>
+
+        <p class="sub-topic-description">
+          Veja como capturamos um erro matemático clássico para manter o programa rodando. 🛡️
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    try {
+      int result = 10 / 0; // Isso gera um erro!
+      System.out.println(result);
+    }
+
+    catch (ArithmeticException e) {
+      // O código vem para cá se houver erro matemático
+      System.err.println("ERRO: Não é possível dividir por zero!");
+    }
+
+    System.out.println("O programa continua rodando normalmente... ✅");
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>
+          <strong>
+            O bloco finally 🏗️
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          O finally é um bloco opcional que vem depois do catch. O código dentro dele <strong>sempre</strong> será executado, não importa se deu erro ou se deu tudo certo. É muito usado para "limpar a bagunça", como fechar uma conexão com banco de dados ou um arquivo.
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    try {
+      System.out.println("Tentando abrir o arquivo...📂");
+      // Lógica aqui
+    }
+
+    catch (Exception e) {
+      System.out.println("Houve um erro inesperado. ❌");
+    }
+
+    finally {
+      System.out.println("Fechando recursos e finalizando processo. 🔒");
+    }
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="poo" class="sub-topic">
+      <div class="sub-topic-title">
+        <h2>Programação Orientada a Objetos (POO)</h2>
+      </div>
+
+      <div class="sub-topic-content">
+        <h3>
+          <strong>
+            O que é uma Classe e um Objeto? 🏷️
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Para facilitar sua vida, use a analogia da <strong>Planta de uma Casa:</strong>
+        </p>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>Classe:</strong>
+            É o projeto (a planta) no papel. Ela diz que a casa deve ter janelas, portas e uma cor, mas a planta em si não é uma casa onde você pode morar. 📝
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Objeto:</strong>
+            É a casa construída na vida real usando aquela planta. Você pode construir várias casas (objetos) diferentes (uma azul, uma amarela) usando o mesmo projeto (classe). 🏠
+          </li>
+        </ul>
+
+        <h3>
+          <strong>
+            Atributos e Métodos:
+          </strong>
+        </h3>
+
+        <ul class="sub-topic-list">
+          <li class="sub-topic-list-item">
+            <strong>Atributos:</strong>
+            São as características (cor, tamanho, modelo). 🎨
+          </li>
+
+          <li class="sub-topic-list-item">
+            <strong>Métodos:</strong>
+            São as ações (abrir porta, ligar luz). ⚡
+          </li>
+        </ul>
+
+        <h3>
+          <strong>
+            Criando sua primeira Classe 🛠️
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Em Java, uma classe geralmente fica em um arquivo separado. Vamos criar uma classe simples para representar um <strong>Celular</strong>.
+        </p>
+
+        <h3>
+          Definindo o Projeto (Classe)
+        </h3>
+
+        <p class="sub-topic-description">
+          Aqui definimos quais características todo celular terá e o que ele pode fazer. 📱
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Phone {
+  // Atributos (Características)
+  String mark;
+  String model;
+  int battery = 100;
+
+  // Métodos (Ação)
+  void connect() {
+    System.out.println("Phone " + model + " Connecting...");
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <h3>
+          <strong>
+            Instanciando um Objeto (Dando vida ao código) 🌟
+          </strong>
+        </h3>
+
+        <p class="sub-topic-description">
+          Depois de criar a planta, precisamos "construir" o objeto no nosso método main usando a palavra-chave new.
+        </p>
+
+        <h3>
+          Criando o Objeto Real
+        </h3>
+
+        <p class="sub-topic-description">
+          Agora transformamos o projeto em algo real na memória do computador. 🚀
+        </p>
+
+        <div class="console-code">
+          <div class="console-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+
+          <div class="console-content">
+            <pre><code class="language-java">
+public class Main {
+  public static void main(String[] args) {
+    // Criando o objeto myPhone
+    Phone myPhone = new Phone();
+
+    // Atribuindo valores
+    myPhone.mark = "Apple";
+    myPhone.model = "Iphone 15";
+
+    // Chamando um método
+    myPhone.connect();
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+
+        <blockquote class="sub-topic-blockquote">
+          <h3>
+            <strong>
+              O Grande Insight: O new e o Apelido do Clone 👤
+            </strong>
+          </h3>
+
+          <p class="sub-topic-description">
+            Para fechar o capítulo, pense no processo de criar um objeto da seguinte forma:
+          </p>
+
+          <ul class="sub-topic-list">
+            <li class="sub-topic-list-item">
+              <strong>A Classe é o DNA:</strong>
+              Ela contém todas as instruções de como algo deve ser, mas ela sozinha não "existe" no mundo real. 🧬
+            </li>
+
+            <li class="sub-topic-list-item">
+              <strong>O new é a Máquina de Clonagem:</strong>
+              Quando você digita new, o Java vai lá no DNA (Classe) e cria uma cópia exata dele na memória do computador. 🏗️
+            </li>
+
+            <li class="sub-topic-list-item">
+              <strong>O Objeto é o "Apelido":</strong>
+              A variável que você cria (ex: meuCelular) é apenas o apelido que você dá para aquele clone específico.
+            </li>
+          </ul>
+        </blockquote>
+      </div>
+    </section>
+
+    <div class="more-content">
+      <div class="notebook-body">
+        <div class="notebook-face">
+          <div class="notebook-face-decoration">
+            <img src="{{url_for('static', filename='img/gojira2.webp')}}" alt="">
+          </div>
+
+          <div class="notebook-content">
+            <span>
+              Para conteúdos mais avançados, consulte a:
+              <a href="https://docs.oracle.com/en/java/javase/" target="_blank" rel="noopener noreferrer">
+                Documentação Oficial do Java
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block previous_link %}
+<a href="{{ url_for('material_page.introduction') }}" class="link-style">
+  <span class="label">
+      Nível Anterior
+  </span>
+
+  <span class="title">
+     <span class="arrow">←</span> Introdução ao Java
+  </span>
+</a>
+{% endblock %}
+
+{% block next_link %}
+<a href="{{ url_for('material_page.method_and_access') }}" class="link-style">
+  <span class="label">
+    Próximo Nível
+  </span>
+
+  <span class="title">
+     Métodos e Acessos <span class="arrow">→</span>
+  </span>
+</a>
+{% endblock %}
