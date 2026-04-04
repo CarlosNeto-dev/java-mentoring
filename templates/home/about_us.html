@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+  <main id="about-us" class="main-about-us">
+    <canvas id="canvas-bg"></canvas>
+
+    <div class="about-us-terminal">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="dot-red"></span>
+          <span class="dot-yellow"></span>
+          <span class="dot-green"></span>
+        </div>
+
+        <div class="terminal-content">
+          <span class="terminal-title">java_monitoria --status</span>
+        </div>
+      </div>
+
+      <div class="terminal-code-text">
+        <pre><code>
+<span class="color-orange">> Inicializando Hub de Suporte...</span>
+
+<span class="color-blue">> Foco: Aprender Java.</span>
+<span class="color-white">> Status:</span> <span class="color-green">Ativo e Compilando...</span>
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="about-us-content">
+      <h1>System.out.<span class="span-decoration">println</span>("Equipe");</h1>
+
+      <div class="user-cards">
+        <div class="user1-card">
+          <div class="user-header">
+            <img src="{{ url_for('static', filename='img/carlos.jpg') }}" alt="carlos-img">
+
+            <h2>Carlos Alberto</h2>
+          </div>
+
+          <div class="monitory-horaries">
+            <h3><span class="span-decoration">Disponibilidade</span></h3>
+
+            <p>Quinta-Feira</p>
+            <p>Sexta-Feira</p>
+          </div>
+        </div>
+
+        <div class="user2-card">
+          <div class="user-header">
+            <img src="{{ url_for('static', filename='img/pedro.jpg') }}" alt="pedro-img">
+
+            <h2>Pedro Brunet</h2>
+          </div>
+
+          <div class="monitory-horaries">
+            <h3><span class="span-decoration">Disponibilidade</span></h3>
+
+            <p>Sábado</p>
+            <p>Domingo</p>
+          </div>
+        </div>
+
+        <div class="user3-card">
+          <div class="user-header">
+            <img src="{{ url_for('static', filename='img/sandro.jpg') }}" alt="sandro-img">
+
+            <h2>Sandro Joaquim</h2>
+          </div>
+
+          <div class="monitory-horaries">
+            <h3><span class="span-decoration">Disponibilidade</span></h3>
+
+            <p>Segunda-Feira</p>
+            <p>Terça-Feira</p>
+            <p>Quarta-Feira</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/about-us.js') }}"></script>
+{% endblock %}
+

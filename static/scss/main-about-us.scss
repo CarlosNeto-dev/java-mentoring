@@ -1,0 +1,296 @@
+@keyframes float-console {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.main-about-us {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10rem;
+  background: linear-gradient(135deg, #05070a, #0a0f16);
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 4rem 2rem;
+
+  #canvas-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .about-us-terminal {
+    background: rgba(15, 20, 25, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    height: 22.5rem;
+    width: 100%;
+    max-width: 55rem;
+    min-width: 300px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 210, 255, 0.05);
+    overflow: hidden;
+    animation: float-console 4s ease-in-out infinite;
+    z-index: 999;
+
+    @media screen and (min-width: 2560px) {
+      max-width: 100rem;
+    }
+
+    .terminal-header {
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: clamp(1.25rem, 1.75vw, 1.75rem);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+
+      .terminal-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .5rem;
+
+        .dot-red {
+          display: inline-block;
+          background: #ff5f56;
+          height: 12.5px;
+          width: 12.5px;
+          border-radius: 50%;
+          box-shadow: 0 0 8px rgba(255, 95, 86, 0.4);
+        }
+
+        .dot-yellow {
+          display: inline-block;
+          background: #ffbd2e;
+          height: 12.5px;
+          width: 12.5px;
+          border-radius: 50%;
+          box-shadow: 0 0 8px rgba(255, 189, 46, 0.4);
+        }
+
+        .dot-green {
+          display: inline-block;
+          background: #27c93f;
+          height: 12.5px;
+          width: 12.5px;
+          border-radius: 50%;
+          box-shadow: 0 0 8px rgba(39, 201, 63, 0.4);
+        }
+      }
+
+      .terminal-content {
+        background: transparent;
+
+        .terminal-title {
+          font-size: 0.95rem;
+          font-weight: 600;
+          color: #00d2ff;
+          text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+
+    .terminal-code-text {
+      height: calc(100% - 3.5rem);
+      overflow-y: auto;
+
+      pre {
+        background: transparent;
+        height: 100%;
+        padding: 1.25rem;
+
+        code {
+          font-size: clamp(1rem, 1.5vw, 1.45rem);
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          line-height: 1.8;
+          font-family: "Fira Code", monospace;
+          text-shadow: none;
+          white-space: pre;
+          word-wrap: normal;
+          color: #e6edf3;
+
+          .color-orange {
+            color: #ff9800;
+            text-shadow: 0 0 10px rgba(255, 152, 0, 0.3);
+          }
+
+          .color-white {
+            color: #ffffff;
+          }
+
+          .color-blue {
+            color: #00d2ff;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+          }
+
+          .color-green {
+            color: #27c93f;
+            text-shadow: 0 0 10px rgba(39, 201, 63, 0.3);
+          }
+        }
+      }
+    }
+  }
+
+  .about-us-content {
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 800;
+      animation: float-console 4s infinite;
+
+      @media screen and (max-width: 800px) {
+        font-size: clamp(1.5rem, 4vw, 3.5rem);
+      }
+
+      @media screen and (min-width: 2560px) {
+        font-size: 6.5rem;
+      }
+    }
+
+    .span-decoration {
+      color: #00d2ff;
+      text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+    }
+
+    .user-cards {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      width: 100%;
+      animation: float-console 4s infinite;
+
+      .user1-card, .user2-card, .user3-card {
+        background: rgba(13, 17, 23, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1rem;
+        padding: 3rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2.5rem;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 26rem;
+
+        @media screen and (min-width: 2560px) {
+          max-width: 34rem;
+        }
+
+        &:hover {
+          transform: translateY(-8px);
+          border-color: #00d2ff;
+          box-shadow: 0 0 30px rgba(0, 210, 255, 0.1);
+        }
+
+        .user-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 1.5rem;
+          position: relative;
+
+          img {
+            width: 120px;
+            height: 120px;
+            border-radius: 1rem;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            padding: 4px;
+            background: #0d1117;
+          }
+
+          h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+
+            @media screen and (min-width: 2560px) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+
+        .monitory-horaries {
+          background: rgba(13, 17, 23, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 0.75rem;
+          padding: 1.5rem 1.25rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: stretch;
+          margin-top: auto;
+
+          h3 {
+            font-family: "Fira Code", monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+
+            @media screen and (min-width: 2560px) {
+              font-size: 1.4rem;
+            }
+          }
+
+          p {
+            font-size: 1.15rem;
+            color: #fff;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding-bottom: 0.75rem;
+
+            &::before {
+              content: "•";
+              color: #00d2ff;
+              margin-right: -0.5rem;
+            }
+
+            @media screen and (min-width: 2560px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    gap: 6rem;
+    padding: 4rem 1rem;
+  }
+}

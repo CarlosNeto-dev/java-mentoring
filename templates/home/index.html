@@ -23,6 +23,10 @@
           <li>
             <a href="#material-page">Material</a>
           </li>
+
+          <li>
+            <a href="{{ url_for('home.about_us') }}">Sobre Nós</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -186,7 +190,7 @@
         </li>
 
         <li class="footer-li">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="locked">Monitoria</a>
+          <a href="{{ url_for('home.about_us') }}" target="_blank" rel="noopener noreferrer">Monitoria</a>
         </li>
 
         <li class="footer-li">
