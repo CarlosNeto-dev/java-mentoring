@@ -1,46 +1,78 @@
-# 💻 Exercícios
+# 💻 Exercícios de Java
 
 🇧🇷 **Versão em Português**
 
-Bem-vindo à seção de **Exercícios**! Aqui você encontrará vários desafios de código para praticar suas habilidades em Java.
+Bem-vindo à seção de **Exercícios**! Aqui você encontrará desafios práticos para colocar em prática tudo o que aprendeu na teoria.
+
+---
+
+✨ **Consulte a Teoria!** ✨
+
+Precisa de ajuda com a lógica? Consulte o material em nossa plataforma web interativa:
+🔗 [https://java-mentoring.onrender.com](https://java-mentoring.onrender.com)
+
+---
 
 ## 🎯 Objetivo
 
 O objetivo desta pasta é fornecer experiência prática com:
 
-*   Algoritmos 🧩
-*   Estruturas de Dados 📊
+*   Lógica de Programação e Algoritmos 🧩
+*   Estruturas de Controle e Dados 📊
 *   Programação Orientada a Objetos (POO) 🏗️
-*   APIs do Java 🛠️
+*   Implementação de Métodos e Encapsulamento 🛠️
 
-## 📂 Como usar
+## 📂 Como Usar
 
-1.  Navegue para a pasta do exercício específico.
-2.  Leia a descrição do problema.
-3.  Implemente a solução em Java.
-4.  Teste seu código! 🚀
+1.  Navegue pela pasta para encontrar os desafios. 📂
+2.  Leia atentamente a descrição do problema. 📖
+3.  Codifique sua solução em Java. ⌨️
+4.  Teste e valide seu código! 🚀
+
+---
+
+## 👨‍🏫 Equipe de Monitoria
+*   **Neto** 🧑‍💻
+*   **Pedro Brunet** 🧑‍🏫
+*   **Sandro Joaquim** 🚀
 
 ---
 ---
 
-# 💻 Exercises
+# 💻 Java Exercises
 
 🇺🇸 **English Version**
 
-Welcome to the **Exercises** section! Here you will find various coding challenges to practice your Java skills.
+Welcome to the **Exercises** section! Here you will find practical challenges to put everything you've learned in theory into practice.
+
+---
+
+✨ **Check the Theory!** ✨
+
+Need help with logic? Check the material on our interactive web platform:
+🔗 [https://java-mentoring.onrender.com](https://java-mentoring.onrender.com)
+
+---
 
 ## 🎯 Objective
 
 The goal of this folder is to provide hands-on experience with:
 
-*   Algorithms 🧩
-*   Data Structures 📊
+*   Programming Logic and Algorithms 🧩
+*   Control and Data Structures 📊
 *   Object-Oriented Programming (OOP) 🏗️
-*   Java APIs 🛠️
+*   Implementation of Methods and Encapsulation 🛠️
 
-## 📂 How to use
+## 📂 How to Use
 
-1.  Navigate to the specific exercise folder.
-2.  Read the problem description.
-3.  Implement the solution in Java.
-4.  Test your code! 🚀
+1.  Browse the folder to find the challenges. 📂
+2.  Read the problem description carefully. 📖
+3.  Code your solution in Java. ⌨️
+4.  Test and validate your code! 🚀
+
+---
+
+## 👨‍🏫 Mentoring Team
+*   **Neto** 🧑‍💻
+*   **Pedro Brunet** 🧑‍🏫
+*   **Sandro Joaquim** 🚀
