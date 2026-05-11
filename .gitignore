@@ -1,0 +1,37 @@
+# Sistema Operacional - MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Sistema Operacional - Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Sistema Operacional - Linux
+*~
+.fuse_hidden*
+.Trash-*
+
+# Ambiente
+.env
+.env.*
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Java
+*.class
+*.jar
+*.war
+
+# Projeto
+workspace/
