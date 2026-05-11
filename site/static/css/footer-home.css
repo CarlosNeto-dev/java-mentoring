@@ -1,0 +1,196 @@
+.footer-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: clamp(1.25rem, 2.5vw, 3rem) 0;
+  gap: clamp(1rem, 1.5vw, 2rem);
+  background-color: #0a0a0a;
+  background-image: radial-gradient(at 0% 50%, rgba(255, 255, 255, 0.02) 0px, transparent 50%), radial-gradient(at 100% 50%, rgba(255, 255, 255, 0.02) 0px, transparent 50%);
+}
+.footer-home .footer-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: float-console 4s infinite linear;
+}
+.footer-home .footer-wrapper .footer-navbar {
+  width: 100%;
+  height: auto;
+  padding: clamp(1.25rem, 2.5vw, 3rem);
+}
+.footer-home .footer-wrapper .footer-navbar .footer-ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 1.5vw, 2rem);
+  width: 100%;
+}
+@media screen and (max-width: 620px) {
+  .footer-home .footer-wrapper .footer-navbar .footer-ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.footer-home .footer-wrapper .footer-navbar .footer-ul .footer-li a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0.2rem 0.75rem;
+  border-bottom: 1px solid transparent;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  will-change: transform;
+  text-transform: uppercase;
+}
+.footer-home .footer-wrapper .footer-navbar .footer-ul .footer-li a:hover {
+  border-bottom-color: white;
+}
+.footer-home .footer-wrapper .footer-navbar .footer-ul .footer-li a:active {
+  transform: scale(0.9);
+}
+@media screen and (min-width: 2560px) {
+  .footer-home .footer-wrapper .footer-navbar .footer-ul .footer-li a {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .footer-home .footer-wrapper .footer-navbar .footer-ul .footer-li a {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+}
+.footer-home .footer-wrapper .footer-credits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: clamp(1rem, 1.5vw, 2rem);
+  padding: clamp(1.25rem, 2.5vw, 3rem) clamp(0.5rem, 3vw, 5rem);
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-home .footer-wrapper .footer-credits h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+}
+@media screen and (min-width: 2560px) {
+  .footer-home .footer-wrapper .footer-credits h3 {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .footer-home .footer-wrapper .footer-credits h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+}
+.footer-home .footer-wrapper .footer-credits h3 span {
+  background: linear-gradient(to right, #fff, #0070f3);
+  font-weight: 800;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer-home .footer-wrapper .footer-credits p {
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+@media screen and (min-width: 2560px) {
+  .footer-home .footer-wrapper .footer-credits p {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .footer-home .footer-wrapper .footer-credits p {
+    font-size: 1.15rem;
+  }
+}
+.footer-home .footer-educational-institution {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: clamp(1.25rem, 2.5vw, 3rem);
+}
+@media screen and (max-width: 620px) {
+  .footer-home .footer-educational-institution {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.footer-home .footer-educational-institution p {
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.2);
+}
+@media screen and (min-width: 2560px) {
+  .footer-home .footer-educational-institution p {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .footer-home .footer-educational-institution p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+.footer-home .footer-educational-institution .social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 1.5vw, 2rem);
+}
+.footer-home .footer-educational-institution .social-circle a {
+  padding: 1.5rem;
+  font-size: 1.45rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.footer-home .footer-educational-institution .social-circle a:hover {
+  color: #fff;
+  border-color: #0070f3;
+  background: rgba(0, 112, 243, 0.05);
+  transform: translateY(-3px);
+}
+@media screen and (min-width: 2560px) {
+  .footer-home .footer-educational-institution .social-circle a {
+    padding: 2.5rem;
+    width: 60px;
+    height: 60px;
+    font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .footer-home .footer-educational-institution .social-circle a {
+    font-size: 1rem;
+    width: 25px;
+    height: 25px;
+    padding: 1rem;
+  }
+}/*# sourceMappingURL=footer-home.css.map */

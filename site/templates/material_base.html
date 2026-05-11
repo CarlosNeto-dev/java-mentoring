@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <aside class="sidebar">
+    <nav class="navbar">
+      <div class="java-logo">
+        <i class="fa-brands fa-java java-icon"></i>
+
+        <h1>Java Monitoria</h1>
+      </div>
+      <ul class="main-nav">
+        <li class="li-main">
+          <details class="chapter-accordion">
+            <summary>
+              <a href="{{ url_for('material_page.introduction', _anchor='introduction') }}" class="main-link">Capítulo 1 - Introdução ao Java 🚀</a>
+
+              <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </summary>
+
+            <ul class="sub-nav">
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.introduction', _anchor='what-is-java') }}" class="sub-link">1.1 - O que é Java? 🌐</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.introduction', _anchor='history-java') }}" class="sub-link">1.2 - História do Java 📜</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.introduction', _anchor='java-features') }}" class="sub-link">1.3 - Características do Java ☑️</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.introduction', _anchor='good-practices') }}" class="sub-link">1.4 - Boas Práticas de Programação ☑️</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.introduction', _anchor='purpose-java') }}" class="sub-link">1.5 - Propósito do Java 🎯</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="li-main">
+          <details class="chapter-accordion">
+            <summary>
+              <a href="{{ url_for('material_page.basic_syntax', _anchor='basic_syntax') }}" class="main-link">Capítulo 2 - Sintaxe Básica 🧬</a>
+
+              <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </summary>
+
+            <ul class="sub-nav">
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='variables-and-data-types') }}" class="sub-link">2.1 - Variáveis e Tipos de Dados 🧮</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='arithmetic-and-logical') }}" class="sub-link">2.2 - Operadores Aritméticos e Lógicos ➕➖</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='scanner-input') }}" class="sub-link">
+                  2.3 - Scanner ⌨
+                </a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='conditionals-and-loops') }}" class="sub-link">2.4 - Condicionais e Loops 🔄</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='methods-and-functions') }}" class="sub-link">2.5 - Métodos e Funções 🛠️</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='error-and-exceptions') }}" class="sub-link">2.6 - Tratamento de Erros e Exceções ⛔️</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.basic_syntax', _anchor='poo') }}" class="sub-link">2.7 - Programação Orientada a Objetos (POO) 🏷️</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="li-main">
+          <details class="chapter-accordion">
+            <summary>
+              <a href="{{ url_for('material_page.method_and_access', _anchor='method-and-access') }}" class="main-link">Capítulo 3 - Métodos e Acessos 🔐</a>
+
+              <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </summary>
+
+            <ul class="sub-nav">
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.method_and_access', _anchor='access-modifiers') }}" class="sub-link">3.1 - Modificadores de Acesso 🔒</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.method_and_access', _anchor='encapsulation') }}" class="sub-link">3.2 - Encapsulamento e Abstração 🛡️</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.method_and_access', _anchor='method-overloading') }}" class="sub-link">3.3 - Sobrecarga de Métodos 🔄</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="li-main">
+          <details class="chapter-accordion">
+            <summary>
+              <a href="{{ url_for('material_page.class_hierarchy', _anchor='class-hierarchy') }}" class="main-link">Capítulo 4 - Hierarquia de Classes 📈</a>
+
+              <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </summary>
+
+            <ul class="sub-nav">
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.class_hierarchy', _anchor='heranca-polimorfismo') }}" class="sub-link">4.1 - Herança e Polimorfismo 🧬</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.class_hierarchy', _anchor='abstract-classes-and-interfaces') }}" class="sub-link">4.2 - Classes Abstratas e Interfaces 🏗️</a>
+              </li>
+
+              <li class="sub-li">
+                <a href="{{ url_for('material_page.class_hierarchy', _anchor='packages-and-code-organization') }}" class="sub-link">4.3 - Pacotes e Organização de Código 📁</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+      <div class="mobile-btn">
+        <i class="fa-solid fa-bars bars-icon"></i>
+      </div>
+  </aside>
+
+  <div class="material-wrapper">
+    {% block material_content %}{% endblock %}
+  </div>
+{% endblock %}
+
+{% block footer %}
+<footer class="footer-material">
+  <div class="footer-material-wrapper">
+    <div class="content-one">
+      {% block previous_link %}{% endblock %}
+    </div>
+
+    <div class="content-two content-style">
+      <a href="https://docs.oracle.com/en/java/javase/" class="link-style" target="_blank" rel="noopener noreferrer">
+        <span class="symbol">
+          ⚙
+        </span>
+
+        <span class="label">
+          Recurso
+        </span>
+
+        <span class="title">
+          Documentação
+        </span>
+      </a>
+      </div>
+
+    <div class="content-three content-style">
+      <a href="#" class="link-style locked">
+        <span class="symbol">
+          ◈
+        </span>
+
+        <span class="label">
+          Treinamento
+        </span>
+
+        <span class="title">
+          Em Produção...
+        </span>
+      </a>
+      </div>
+
+    <div class="content-four">
+      {% block next_link %}{% endblock %}
+    </div>
+  </div>
+
+  <div class="footer-material-credits">
+    <h3>Designed & Engineered by <span>Carlos Alberto da Silva Neto</span></h3>
+    <p>Java Fellow Project 2026</p>
+  </div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/material.js') }}"></script>
+{% endblock %}

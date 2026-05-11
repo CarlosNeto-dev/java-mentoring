@@ -1,0 +1,16 @@
+services:
+  terminal:
+    build: ./docker-infrastructure/workspace
+    container_name: workspace_terminal
+    volumes:
+      - .:/app 
+    stdin_open: true
+    tty: true
+
+  web-backend:
+    build: ./docker-infrastructure/web-backend
+    container_name: web_backend
+    volumes:
+      - ./site:/app  
+    ports:
+      - "5001:5000"

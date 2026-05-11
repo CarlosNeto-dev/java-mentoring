@@ -1,0 +1,75 @@
+.console-code {
+  background: rgba(13, 17, 23, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: clamp(1rem, 1.5vw, 2rem);
+  padding-top: 4.5rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.console-code::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+.console-code .console-dots {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+.console-code .console-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.console-code .console-dots .dot-red {
+  background: #ff5f56;
+}
+.console-code .console-dots .dot-yellow {
+  background: #ffbd2e;
+}
+.console-code .console-dots .dot-green {
+  background: #27c93f;
+}
+.console-code .console-content {
+  position: relative;
+  z-index: 2;
+}
+.console-code .console-content pre {
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+.console-code .console-content pre::-webkit-scrollbar {
+  height: 6px;
+}
+.console-code .console-content pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+.console-code .console-content pre code {
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace !important;
+  text-shadow: none !important;
+  white-space: pre;
+  word-wrap: normal;
+}/*# sourceMappingURL=code-theme.css.map */
