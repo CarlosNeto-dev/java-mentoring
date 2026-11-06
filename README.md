@@ -10,7 +10,7 @@ Bem-vindo ao repositório de **Monitoria Java**! Este projeto tem como objetivo 
 
 Temos o prazer de anunciar o lançamento da nossa nova plataforma web interativa! Agora, todo o conteúdo teórico está disponível de forma mais acessível e dinâmica. Explore os tópicos, aprenda com exemplos e aprofunde seus conhecimentos em Java diretamente no seu navegador.
 
-🔗 **Acesse a plataforma aqui:** [https://java-mentoring.onrender.com](https://java-mentoring.onrender.com)
+🔗 **Acesse a plataforma aqui:** https://java-mentoring-ujy7.vercel.app
 
 ---
 
@@ -54,7 +54,7 @@ Welcome to the **Java Mentoring** repository! This project aims to assist studen
 
 We are excited to announce the launch of our new interactive web platform! Now, all theoretical content is available in a more accessible and dynamic way. Explore topics, learn with examples, and deepen your Java knowledge directly in your browser.
 
-🔗 **Access the platform here:** [https://java-mentoring.onrender.com](https://java-mentoring.onrender.com)
+🔗 **Access the platform here:** https://java-mentoring-ujy7.vercel.app
 
 ---
 
